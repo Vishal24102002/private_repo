@@ -810,7 +810,7 @@ organic part css is over here to edit it make the css changes here
   line-height: 1.6;
 }
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .org-section {
       flex-direction: column;
       text-align: center;
