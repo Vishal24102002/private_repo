@@ -854,7 +854,8 @@ organic part css is over here to edit it make the css changes here
 .page-title .heading h1 {
   font-size: 45px;
   font-weight: 700;
-  padding: 130px;
+  padding-top: 130px;
+  padding-bottom: 130px;
   color:#f9f9f9;
   background-color: transparent;
 }
