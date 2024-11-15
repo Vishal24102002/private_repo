@@ -826,6 +826,58 @@ organic part css is over here to edit it make the css changes here
   }
 }
 
+/* css code for the registration webpage  */
+
+.card {
+  background-color: #36dbf8;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.lab {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+.gender-label {
+  margin-right: 10px;
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/

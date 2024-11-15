@@ -111,11 +111,50 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">registration</li>
+            <li class="current">Registration</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
+    <div class="reg_main_body" style="display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;">
+    <div class="card">
+      <h2>Volunters</h2>
+      <form action="submit_form.php" method="post">
+          <label for="fname" class="lab">First Name:</label>
+          <input type="text" id="fname" name="fname" required>
+
+          <label for="lname" class="lab">Last Name:</label>
+          <input type="text" id="lname" name="lname" required>
+
+          <label for="email" class="lab">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password" class="lab">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="dob" class="lab">Date of Birth:</label>
+          <input type="date" id="dob" name="dob">
+
+          <label for="gender" class="lab">Gender:</label>
+          <div>
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male" class="gender-label">Male</label>
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female" class="gender-label">Female</label>
+          </div>
+
+          <label for="phone" class="lab">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <input type="submit" value="Register">
+      </form>
+  </div>
+  </div>
+
 
     <!-- add contents for the event part here -->
 
