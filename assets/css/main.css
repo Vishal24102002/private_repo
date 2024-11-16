@@ -170,13 +170,14 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 30px 0;
   transition: all 0.5s;
   z-index: 997;
 }
 
 
-.header .logo img {
+.header .logo {
+  overflow:visible;
   max-height: 36px;
   margin-right: 8px;
 }
@@ -643,11 +644,12 @@ h6 {
 
 /* logo for top nav */
 .image_logo_neav{
-  height: 80px;
+  padding: 25px;
+  min-height: 150px;
   /* background-color: #059652; */
-  width: 100px;
-  /* overflow: hidden; */
-  display: flex;
+  min-width: 150px;
+  overflow: visible;
+  display:block;
   justify-content: center; 
   align-items: center; 
 }
@@ -656,11 +658,12 @@ h6 {
 .image_logo_neav img {
   border-style: solid;
   border-color: gold;
+  object-fit: cover; 
   padding: 5px;
   min-width: 100%;
-  min-height: fit-content; /* Sets a maximum width to maintain image proportions */
-  border-radius: 50%; /*Adds rounded corners */
-  object-fit: fill; /* Keeps the image contained within its bounding box */
+  min-height:fit-content; /*Sets a maximum width to maintain image proportions*/
+  border-radius: 50%;
+  object-fit: cover; 
 }
 
   /* box-sizing: border-box;
@@ -883,6 +886,15 @@ input[type="submit"]:hover {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+}
+
+.image_logo_neav{
+  height: 80px;
+  width: 80px;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 /*--------------------------------------------------------------
