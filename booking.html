@@ -49,7 +49,7 @@
 }
 
 .room-card img {
-  width: 150px;
+  width: 200px;
   height: auto;
   object-fit: cover;
 }
@@ -60,8 +60,9 @@
 }
 
 .room-details h3 {
+  font-family: 'Great Vibes';
   margin: 0;
-  font-size: 18px;
+  font-size: 34px;
 }
 
 .status {
@@ -170,11 +171,17 @@ button:hover {
         <ul>
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+            <li><a href="eco-stay.html">Eco-stay</a></li>
+            <li><a href="eco-farm.html">Eco-farm</a></li>
+            <li><a href="wellness.html" class="active">Wellness</a></li>
+            </ul>
+          </li>
           <li><a href="index.html#portfolio">Gallery</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="#">Pricing</a></li>
           <li><a href="starter-page.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="event.html">Events</a></li>
           <!-- uncomment for drop down -->
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -210,7 +217,7 @@ button:hover {
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Booking</h1>
+              <h1 style="color: aqua;">Booking</h1>
               <!-- <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> -->
             </div>
           </div>
@@ -238,7 +245,9 @@ button:hover {
             <div class="room-card">
               <img src="assets/img/eco-stay/eco-stay7.jpg" alt="Room Image">
               <div class="room-details">
-                <h3>Discover</h3>
+                <center>
+                <h3><b>Discover</b></h3>
+              </center>
                 <span class="status">Room unavailable</span>
                 <p>2 Adults max</p>
                 <p>36 m²</p>
@@ -248,9 +257,9 @@ button:hover {
             </div>
       
             <div class="room-card">
-              <img src="room2.jpg" alt="Room Image">
+              <img src="assets/img/index_background.jpg" alt="Room Image">
               <div class="room-details">
-                <h3>Romantic Night</h3>
+                <center><h3><b>Romantic Night</b></h3></center>
                 <span class="status">Room unavailable</span>
                 <p>2 Adults max</p>
                 <p>36 m²</p>
@@ -258,7 +267,19 @@ button:hover {
                 <button>Contact</button>
               </div>
             </div>
-      
+
+            <div class="room-card">
+              <img src="assets/img/index_background.jpg" alt="Room Image">
+              <div class="room-details">
+                <center><h3><b>Health Stay</b></h3></center>
+                <span class="status">Room unavailable</span>
+                <p>2 Adults max</p>
+                <!-- <p>36 m²</p> -->
+                <a href="#">More details</a>
+                <button>Contact</button>
+              </div>
+            </div>
+
             <!-- Repeat similar structure for more rooms -->
           </div>
 
