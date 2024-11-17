@@ -353,8 +353,8 @@
                   <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
 
                   <div class="date-inputs">
-                    <input type="date" class="date-input" placeholder="Check-in">
-                    <input type="date" class="date-input" placeholder="Check-out">
+                    <input type="date" class="date-input-check-in" placeholder="Check-in">
+                    <input type="date" class="date-input-check-out" placeholder="Check-out">
                   </div>
 
                   <select class="guest-input">
@@ -365,7 +365,7 @@
                     <!-- Add more options as needed -->
                   </select>
 
-                  <button type="submit" class="search-button">Search</button>
+                  <button type="submit" class="search-button" onclick="getSelectedcheckinDate()" >Search</button>
                 </form>
               </div>
             </div>
@@ -483,10 +483,11 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/booking.js"></script>
 </body>
 
 </html>
