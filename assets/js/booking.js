@@ -1,10 +1,11 @@
 function getSelectedcheckinDate() {
     // Get the date input element
-    const dateInput = document.getElementById("date-input-check-in")
+    const indateInput = document.getElementById("date-input-check-in")
+    const outdateInput = document.getElementById("date-input-check-out")
 
     // Get the selected date value
-    const selectedDate = dateInput.value;
-    const date = new Date(selectedDate);
+    const indate = new Date(indateInput.value);
+    const outdate = new Date(outdateInput.value);
 
   // Array of month names
   const monthNames = [
@@ -13,16 +14,23 @@ function getSelectedcheckinDate() {
   ];
 
   // Get the month name
-  const monthName = monthNames[date.getMonth()]; // getMonth() returns the month index (0-11)
+  const inmonthName = monthNames[indate.getMonth()]; // getMonth() returns the month index (0-11)
+  const outmonthName = monthNames[outdate.getMonth()];
 
   // Construct the formatted date string
-  const formattedDate = `${monthName} ${date.getDate()},${date.getFullYear()}`;
-
-  // Display the formatted date in the label
-  document.getElementById("Check-in-label").innerText = formattedDate;
+  const formattedinDate = `${inmonthName} ${indate.getDate()},${indate.getFullYear()}`;
+  const formattedoutDate = `${outmonthName} ${outdate.getDate()},${outdate.getFullYear()}`;
 
     // document.getElementById("Check-in-label").innerText= selectedDate
   
     // Display the selected date
-    alert("Selected Date: " + formattedDate);
+    if (indate.getDate()<outdate.getDate()){
+      alert("check out date can't be less than check in date")
+    }
+    else{
+      document.getElementById("Check-in-label").innerText = formattedinDate;
+      document.getElementById("Check-out-label").innerText = formattedoutDate;
+      alert("review the registration details before moving forward as changes in dates are not entertained");
+    }
+    
   }
