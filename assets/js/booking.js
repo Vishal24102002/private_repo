@@ -24,7 +24,7 @@ function getSelectedcheckinDate() {
     // document.getElementById("Check-in-label").innerText= selectedDate
   
     // Display the selected date
-    if (indate.getDate()<outdate.getDate()){
+    if (indate.getDate()>outdate.getDate()){
       alert("check out date can't be less than check in date")
     }
     else{
