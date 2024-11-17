@@ -353,8 +353,8 @@
                   <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
 
                   <div class="date-inputs">
-                    <input type="date" class="date-input-check-in" placeholder="Check-in">
-                    <input type="date" class="date-input-check-out" placeholder="Check-out">
+                    <input type="date" class="date-input" id="date-input-check-in" placeholder="Check-in">
+                    <input type="date" class="date-input" id="date-input-check-out" placeholder="Check-out">
                   </div>
 
                   <select class="guest-input">
@@ -365,7 +365,7 @@
                     <!-- Add more options as needed -->
                   </select>
 
-                  <button type="submit" class="search-button" onclick="getSelectedcheckinDate()" >Search</button>
+                  <button type="button" class="search-button" onclick="getSelectedcheckinDate()" >Search</button>
                 </form>
               </div>
             </div>
@@ -377,8 +377,8 @@
                   <p>Check-out:</p>
                 </div>
                 <div class="det2">
-                  <p><b>Tue, Dec 24, 2024</b></p>
-                  <p><b>Wed, Dec 25, 2024</b></p>
+                  <p id="Check-in-label"><b>Tue, Dec 24, 2024</b></p>
+                  <p id="Check-out-label"><b>Wed, Dec 25, 2024</b></p>
                 </div>
               </div>
               <p>1 room, 2 adults, 1 night</p>
