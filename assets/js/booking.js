@@ -28,6 +28,13 @@ function getSelectedcheckinDate() {
       alert("check out date can't be less than check in date")
     }
     else{
+      const selectElement = document.getElementById("guestSelect");
+
+      // Get the selected value
+      const selectedValue = selectElement.value;
+
+      // Display the selected value (you can modify this to use it as needed)
+      document.getElementById("room_rev").innerText = `${selectedValue} ${outdate.getDate()-indate.getDate()} night`;
       document.getElementById("Check-in-label").innerText = formattedinDate;
       document.getElementById("Check-out-label").innerText = formattedoutDate;
       alert("review the registration details before moving forward as changes in dates are not entertained");
