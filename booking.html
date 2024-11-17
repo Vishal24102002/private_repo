@@ -16,7 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,154 +28,177 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-   <style>
-/*      style for the reservation summary */
-     .reservation-summary {
-       text-align:center;
-  background-color: #e6f7f5;
-  padding: 15px;
-  border-radius: 5px;
-}
+  <style>
+    /*      style for the reservation summary */
+    .reservation-summary {
+      background-color: #e6f7f5;
+      padding: 15px;
+      border-radius: 5px;
+    }
 
-.add-room-btn,
-.apply-btn,
-.continue-btn {
-  background-color: #5acba1;
-  color: white;
-  border: none;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .room_reserve_detail{
+      justify-content: center;
+      display: flex;
+      padding: 15px;
+      /* align-content: center; */
+    }
 
-.promo-code {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 15px;
-}
+    .det1{
+      flex: 1;
+      padding-left: 25px;
+      justify-content: left;
+    }
 
-.total {
-  margin-top: 15px;
-  font-weight: bold;
-}
+    .det2{
+      padding-left: 30px;
+      text-align: justify
+    }
 
-/*      style for the other part */
-.container1 {
-  display: flex;
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-}
+    .reservation-summary h4{
+      text-align: center;
+    }
 
-.room-list {
-  flex: 3;
-}
+    .add-room-btn,
+    .apply-btn,
+    .continue-btn {
+      background-color: #5acba1;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.room-card {
-  display: flex;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-}
+    .promo-code {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
 
-.room-card img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-}
+    .total {
+      margin-top: 15px;
+      font-weight: bold;
+    }
 
-.room-details {
-  padding: 15px;
-  flex: 1;
-}
+    /* style for the other part */
+    .container1 {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
 
-.room-details h3 {
-  font-family: 'Great Vibes';
-  margin: 0;
-  font-size: 34px;
-}
+    .room-list {
+      flex: 3;
+    }
 
-.status {
-  color: #4CAF50;
-  font-weight: bold;
-  display: block;
-  margin-top: 5px;
-}
+    .room-card {
+      display: flex;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
 
-.room-details p {
-  margin: 5px 0;
-  color: #555;
-}
+    .room-card img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
 
-.room-details a {
-  color: #007BFF;
-  text-decoration: none;
-  display: block;
-  margin-top: 10px;
-}
+    .room-details {
+      padding: 15px;
+      flex: 1;
+    }
 
-button {
-  padding: 8px 12px;
-  border: none;
-  background-color: #009688;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+    .room-details h3 {
+      font-family: 'Great Vibes';
+      margin: 0;
+      font-size: 34px;
+    }
 
-button:hover {
-  background-color: #00796B;
-}
-  .search_part{
-    max-height: fit-content;
-  }
-  .search-container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-  }
+    .status {
+      color: #4CAF50;
+      font-weight: bold;
+      display: block;
+      margin-top: 5px;
+    }
 
-  .search-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+    .room-details p {
+      margin: 5px 0;
+      color: #555;
+    }
 
-  .search-input,
-  .date-input,
-  .guest-input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-  }
+    .room-details a {
+      color: #007BFF;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+    }
 
-  .date-inputs {
-    display: flex;
-    gap: 10px;
-  }
+    button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #009688;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
 
-  .search-button {
-    padding: 10px;
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+    button:hover {
+      background-color: #00796B;
+    }
 
-  .search-button:hover {
-    background-color: #ff4500;
-  }
+    .search_part {
+      max-height: fit-content;
+    }
+
+    .search-container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .search-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .search-input,
+    .date-input,
+    .guest-input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .date-inputs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-button {
+      padding: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .search-button:hover {
+      background-color: #ff4500;
+    }
   </style>
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -196,17 +221,18 @@ button:hover {
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <div div class="image_logo_neav"><img src="assets/img/H.jpg"></div>
       </a>
-      
-      
+
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-            <li><a href="eco-stay.html">Eco-stay</a></li>
-            <li><a href="eco-farm.html">Eco-farm</a></li>
-            <li><a href="wellness.html" class="active">Wellness</a></li>
+              <li><a href="eco-stay.html">Eco-stay</a></li>
+              <li><a href="eco-farm.html">Eco-farm</a></li>
+              <li><a href="wellness.html" class="active">Wellness</a></li>
             </ul>
           </li>
           <li><a href="index.html#portfolio">Gallery</a></li>
@@ -272,25 +298,13 @@ button:hover {
 
           <div class="room-list">
             <h2>Select rooms</h2>
-      
+
             <div class="room-card">
               <img src="assets/img/eco-stay/eco-stay7.jpg" alt="Room Image">
               <div class="room-details">
                 <center>
-                <h3><b>Discover</b></h3>
-              </center>
-                <span class="status">Room unavailable</span>
-                <p>2 Adults max</p>
-                <p>36 m²</p>
-                <a href="#">More details</a>
-                <button>Contact</button>
-              </div>
-            </div>
-      
-            <div class="room-card">
-              <img src="assets/img/index_background.jpg" alt="Room Image">
-              <div class="room-details">
-                <center><h3><b>Romantic Night</b></h3></center>
+                  <h3><b>Discover</b></h3>
+                </center>
                 <span class="status">Room unavailable</span>
                 <p>2 Adults max</p>
                 <p>36 m²</p>
@@ -302,7 +316,23 @@ button:hover {
             <div class="room-card">
               <img src="assets/img/index_background.jpg" alt="Room Image">
               <div class="room-details">
-                <center><h3><b>Health Stay</b></h3></center>
+                <center>
+                  <h3><b>Romantic Night</b></h3>
+                </center>
+                <span class="status">Room unavailable</span>
+                <p>2 Adults max</p>
+                <p>36 m²</p>
+                <a href="#">More details</a>
+                <button>Contact</button>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <img src="assets/img/index_background.jpg" alt="Room Image">
+              <div class="room-details">
+                <center>
+                  <h3><b>Health Stay</b></h3>
+                </center>
                 <span class="status">Room unavailable</span>
                 <p>2 Adults max</p>
                 <!-- <p>36 m²</p> -->
@@ -314,53 +344,61 @@ button:hover {
             <!-- Repeat similar structure for more rooms -->
           </div>
 
-        <!-- --------------------------------------------------------------------->
-        <div>
-        <div class="search_part">
-          <div class="search-container">
-          <h2>Book Hotels and Homestays</h2>
-          <form class="search-form">
-            <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
-            
-            <div class="date-inputs">
-              <input type="date" class="date-input" placeholder="Check-in">
-              <input type="date" class="date-input" placeholder="Check-out">
+          <!-- --------------------------------------------------------------------->
+          <div>
+            <div class="search_part">
+              <div class="search-container">
+                <h2>Book Hotels and Homestays</h2>
+                <form class="search-form">
+                  <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
+
+                  <div class="date-inputs">
+                    <input type="date" class="date-input" placeholder="Check-in">
+                    <input type="date" class="date-input" placeholder="Check-out">
+                  </div>
+
+                  <select class="guest-input">
+                    <option value="2 Adults, 1 Room">2 Adults | 1 Room</option>
+                    <option value="2 Adults, 1 Room">1 Adults | 1 Room</option>
+                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
+                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
+                    <!-- Add more options as needed -->
+                  </select>
+
+                  <button type="submit" class="search-button">Search</button>
+                </form>
+              </div>
             </div>
-            
-            <select class="guest-input">
-              <option value="2 Adults, 1 Room">2 Adults | 1 Room</option>
-              <option value="2 Adults, 1 Room">1 Adults | 1 Room</option>
-              <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
-              <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
-              <!-- Add more options as needed -->
-            </select>
-            
-            <button type="submit" class="search-button">Search</button>
-          </form>
+            <div class="reservation-summary">
+              <h4>Your reservation</h4>
+              <div class="room_reserve_detail">
+                <div class=""det1>
+                  <p>Check-in:</p>
+                  <p>Check-out:</p>
+                </div>
+                <div class="det2">
+                  <p><b>Tue, Dec 24, 2024</b></p>
+                  <p><b>Wed, Dec 25, 2024</b></p>
+                </div>
+              </div>
+              <p>1 room, 2 adults, 1 night</p>
+              <button class="add-room-btn">Please add rooms</button>
+
+              <div class="promo-code">
+                <label for="promo-code">promo code</label>
+                <input type="text" id="promo-code" placeholder="Enter code" style="width=60px;">
+                <button class="apply-btn">Apply</button>
+              </div>
+
+              <div class="total">
+                <p>Total: <span>₹0.00</span></p>
+              </div>
+
+              <button class="continue-btn">Continue</button>
+            </div>
           </div>
         </div>
-        <div class="reservation-summary">
-    <h4>Your reservation</h4>
-    <p>Check-in: Tue, Dec 24, 2024</p>
-    <p>Check-out: Wed, Dec 25, 2024</p>
-    <p>1 room, 2 adults, 1 night</p>
-    <button class="add-room-btn">Please add rooms</button>
-
-    <div class="promo-code">
-      <label for="promo-code">promo code</label>
-      <input type="text" id="promo-code" placeholder="Enter code" style="width=60px;">
-      <button class="apply-btn">Apply</button>
-    </div>
-
-    <div class="total">
-      <p>Total: <span>₹0.00</span></p>
-    </div>
-
-    <button class="continue-btn">Continue</button>
-  </div>
-        </div>
-        </div>
-        </div>
+      </div>
       </div>
 
     </section><!-- /Starter Section Section -->
@@ -373,9 +411,11 @@ button:hover {
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename" style="font-family: 'Great Vibes', cursive; font-size: 58px; color: #8B4513;">HEM</span>
+            <span class="sitename"
+              style="font-family: 'Great Vibes', cursive; font-size: 58px; color: #8B4513;">HEM</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
+            donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
             <a href="https://www.instagram.com/hem.eco.farm.stay.southgoa/"><i class="bi bi-instagram"></i></a>
             <a href="https://www.youtube.com/@HemFarmStay/featured"><i class="bi bi-youtube"></i></a>
@@ -428,7 +468,8 @@ button:hover {
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
