@@ -133,9 +133,6 @@
           <label for="email" class="lab">Email:</label>
           <input type="email" id="email" name="email" required>
 
-          <label for="password" class="lab">Password:</label>
-          <input type="password" id="password" name="password" required>
-
           <label for="dob" class="lab">Date of Birth:</label>
           <input type="date" id="dob" name="dob">
 
@@ -224,6 +221,55 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <script>
+      function getGenderValue() {
+      // Get all radio buttons with name "gender"
+      const genderElements = document.getElementsByName("gender");
+  
+      // Loop through the elements to find the checked one
+      for (const element of genderElements) {
+        if (element.checked) {
+          return element.value; // Return the value of the checked element
+        }
+      }
+      return null; // Return null if no element is checked
+    }
+
+    // Example usage  
+    function submitForm() {
+      // Collect form data
+      const Fname = document.getElementById("fname").value;
+      const Lname = document.getElementById("lname").value;
+      const email = document.getElementById("email").value;
+      const DOB = document.getElementById("dob").value;
+      const Gender = getGenderValue();
+      const Phone = document.getElementById("phone").value;
+
+      // Prepare the data object
+      const data = {
+        First_Name: Fname
+        Last_Name: Lname
+        Email: email
+        DOB: DOB
+        Gender: Gender
+        Phone_No: Phone
+      };
+
+      // Send data using fetch
+      fetch("https://script.google.com/macros/s/AKfycbyozs-QlbxOzwPt_d6PMbELcZJp0eRO-3jxkDD_tqhk4de1xGjGH2XYhvt4DDEu8jNV/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert(data); // Success message
+      })
+      .catch(error => {
+        alert("Error: " + error);
+      });
+    }
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
