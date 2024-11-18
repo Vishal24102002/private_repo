@@ -130,9 +130,9 @@
 
           <label for="gender" class="lab">Gender:</label>
           <div>
-              <input type="radio" id="male" name="gender" value="male" required>
+              <input type="radio" id="gender" name="gender" value="male" required>
               <label for="male" class="gender-label">Male</label>
-              <input type="radio" id="female" name="gender" value="female" required>
+              <input type="radio" id="gender" name="gender" value="female" required>
               <label for="female" class="gender-label">Female</label>
           </div>
 
@@ -217,7 +217,7 @@
   <script>
       function getGenderValue() {
       // Get all radio buttons with name "gender"
-      const genderElements = document.getElementsByName("gender");
+      const genderElements = document.getElementsById("gender");
   
       // Loop through the elements to find the checked one
       for (const element of genderElements) {
