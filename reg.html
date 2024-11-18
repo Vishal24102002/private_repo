@@ -5,6 +5,98 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>HEM Registration</title>
+  <script>
+    function showLoading() {
+      document.getElementById("loading").style.display = "block";
+    }
+
+    // Function to hide the loading screen
+    function hideLoading() {
+      document.getElementById("loading").style.display = "none";
+    }
+
+    function getGenderValue() {
+      // Get all radio buttons with name "gender"
+      const genderElements = document.getElementsByName("gender");
+
+      // Loop through the elements to find the checked one
+      for (const element of genderElements) {
+        if (element.checked) {
+          return element.value; // Return the value of the checked element
+        }
+      }
+      return null; // Return null if no element is checked
+    }
+
+    // Example usage  
+    function submitForm() {
+      showLoading();
+
+      // Collect form data
+      const Fname = document.getElementById("fname").value;
+      const Lname = document.getElementById("lname").value;
+      const email = document.getElementById("email").value;
+      const birth = document.getElementById("dob").value;
+      const Gender1 = getGenderValue();
+      const Phone = document.getElementById("phone").value;
+
+      console.log(Gender1)
+
+      // Prepare the data object
+      const data = {
+        First_Name: Fname,
+        Last_Name: Lname,
+        Email: email,
+        DOB: birth,
+        Gender: Gender1,
+        Phone_No: Phone
+      };
+
+      // Send data using fetch
+      fetch("https://script.google.com/macros/s/AKfycbyozs-QlbxOzwPt_d6PMbELcZJp0eRO-3jxkDD_tqhk4de1xGjGH2XYhvt4DDEu8jNV/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert(data); 
+        hideLoading();// Success message
+      })
+      .catch(error => {
+        alert("Error: " + error);
+        hideLoading();
+      });
+    }
+  </script>
+
+  <style>
+    #loading {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      text-align: center;
+      line-height: 100vh;
+    }
+    .spinner {
+      border: 8px solid #f3f3f3; /* Light gray */
+      border-top: 8px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -130,9 +222,9 @@
 
           <label for="gender" class="lab">Gender:</label>
           <div>
-              <input type="radio" id="gender" name="gender" value="male" required>
+              <input type="radio" id="male" name="gender" value="male" required>
               <label for="male" class="gender-label">Male</label>
-              <input type="radio" id="gender" name="gender" value="female" required>
+              <input type="radio" id="female" name="gender" value="female" required>
               <label for="female" class="gender-label">Female</label>
           </div>
 
@@ -142,6 +234,11 @@
           <input type="submit" value="Register">
       </form>
   </div>
+  </div>
+
+  <!-- Loading screen -->
+  <div id="loading">
+    <div class="spinner"></div>
   </div>
 
 
@@ -213,55 +310,6 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <script>
-      function getGenderValue() {
-      // Get all radio buttons with name "gender"
-      const genderElements = document.getElementsById("gender");
-  
-      // Loop through the elements to find the checked one
-      for (const element of genderElements) {
-        if (element.checked) {
-          return element.value; // Return the value of the checked element
-        }
-      }
-      return null; // Return null if no element is checked
-    }
-
-    // Example usage  
-    function submitForm() {
-      // Collect form data
-      const Fname = document.getElementById("fname").value;
-      const Lname = document.getElementById("lname").value;
-      const email = document.getElementById("email").value;
-      const birth = document.getElementById("dob").value;
-      const Gender1 = getGenderValue();
-      const Phone = document.getElementById("phone").value;
-
-      // Prepare the data object
-      const data = {
-        First_Name: Fname
-        Last_Name: Lname
-        Email: email
-        DOB: birth
-        Gender: Gender1
-        Phone_No: Phone
-      };
-
-      // Send data using fetch
-      fetch("https://script.google.com/macros/s/AKfycbyozs-QlbxOzwPt_d6PMbELcZJp0eRO-3jxkDD_tqhk4de1xGjGH2XYhvt4DDEu8jNV/exec", {
-        method: "POST",
-        body: JSON.stringify(data)
-      })
-      .then(response => response.text())
-      .then(data => {
-        alert(data); // Success message
-      })
-      .catch(error => {
-        alert("Error: " + error);
-      });
-    }
-  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
