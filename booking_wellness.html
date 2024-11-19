@@ -28,7 +28,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <style>
+  <!-- <style>
     /*      style for the reservation summary */
     .reservation-summary {
       padding: 20px 30px;
@@ -202,7 +202,7 @@
     .search-button:hover {
       background-color: #ff4500;
     }
-  </style>
+  </style> -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -298,110 +298,17 @@
     <section id="starter-section" class="starter-section section">
 
       <div class="container" data-aos="fade-up">
-        <div class="container1">
-
-          <div class="room-list">
-            <h2>Select rooms</h2>
-
-            <div class="room-card">
-              <img src="assets/img/eco-stay/eco-stay7.jpg" alt="Room Image">
-              <div class="room-details">
-                <center>
-                  <h3><b>Discover</b></h3>
-                </center>
-                <span class="status">Room unavailable</span>
-                <p>2 Adults max</p>
-                <p>36 m²</p>
-                <a href="#">More details</a>
-                <button>Contact</button>
-              </div>
+        <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Quantum Healing</h3>
+              <p><b>Rediscover harmony by aligning your mind, body, and soul with the universe's energy.</b><br>
+                In this session, the owner channels healing energies to clear emotional blocks, balance energy fields, and rejuvenate your soul. Experience physical, emotional, and spiritual well-being.  
+              </p>
+              <h4><sup>₹</sup>1200</h4>
+              <p>Duration: 1 hour</p> 
+              <div class="text-center"><a href="booked" class="buy-btn">Book-Now</a></div>
             </div>
-
-            <div class="room-card">
-              <img src="assets/img/index_background.jpg" alt="Room Image">
-              <div class="room-details">
-                <center>
-                  <h3><b>Romantic Night</b></h3>
-                </center>
-                <span class="status">Room unavailable</span>
-                <p>2 Adults max</p>
-                <p>36 m²</p>
-                <a href="#">More details</a>
-                <button>Contact</button>
-              </div>
-            </div>
-
-            <div class="room-card">
-              <img src="assets/img/index_background.jpg" alt="Room Image">
-              <div class="room-details">
-                <center>
-                  <h3><b>Health Stay</b></h3>
-                </center>
-                <span class="status">Room unavailable</span>
-                <p>2 Adults max</p>
-                <!-- <p>36 m²</p> -->
-                <a href="#">More details</a>
-                <button>Contact</button>
-              </div>
-            </div>
-
-            <!-- Repeat similar structure for more rooms -->
-          </div>
-
-          <!-- --------------------------------------------------------------------->
-          <div>
-            <div class="search_part">
-              <div class="search-container">
-                <h2>Book-Now</h2>
-                <form class="search-form">
-                  <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
-
-                  <div class="date-inputs">
-                    <input type="date" class="date-input" id="date-input-check-in" placeholder="Check-in">
-                    <input type="date" class="date-input" id="date-input-check-out" placeholder="Check-out">
-                  </div>
-
-                  <select class="guest-input" id="guestSelect">
-                    <option value="2 Adults, 1 Room">2 Adults | 1 Room</option>
-                    <option value="2 Adults, 1 Room">1 Adults | 1 Room</option>
-                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
-                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
-                    <!-- Add more options as needed -->
-                  </select>
-
-                  <button type="button" class="search-button" onclick="getSelectedcheckinDate()" >Search</button>
-                </form>
-              </div>
-            </div>
-            <div class="reservation-summary">
-              <h4>Your reservation</h4>
-              <div class="room_reserve_detail">
-                <div class=""det1>
-                  <p>Check-in:</p>
-                  <p>Check-out:</p>
-                </div>
-                <div class="det2">
-                  <p id="Check-in-label"><b></b></p>
-                  <p id="Check-out-label"><b></b></p>
-                </div>
-              </div>
-              <center><p id="room_rev">1 room, 2 adults, 1 night</p>
-              <button class="add-room-btn">Please add rooms</button>
-
-              <div class="promo-code">
-                <label for="promo-code">promo code</label>
-                <input type="text" id="promo-code" placeholder="Enter code" style="width=60px;">
-              </div>
-              <button class="apply-btn">Apply</button>
-              <div class="total">
-                <p>Total: <span>₹0.00</span></p>
-              </div>
-              <button class="continue-btn">Continue</button>
-              </center>
-            </div>
-          </div>
-        </div>
-      </div>
+          </div><!-- End Pricing Item -->
       </div>
 
     </section><!-- /Starter Section Section -->
