@@ -887,7 +887,6 @@ input[type="submit"]:hover {
     transition-delay: 0 !important;
   }
 }
-
 .image_logo_neav{
   height: 80px;
   width: 80px;
@@ -896,6 +895,7 @@ input[type="submit"]:hover {
   justify-content: center; 
   align-items: center; 
 }
+
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
@@ -1094,6 +1094,15 @@ section,
 
   .hero p {
     font-size: 18px;
+  }
+
+  .page-title .heading h1 {
+    font-size: 45px;
+    font-weight: 700;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    color:#f9f9f9;
+    background-color: transparent;
   }
 }
 
