@@ -28,190 +28,70 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <!-- <style>
-    /*      style for the reservation summary */
-    .reservation-summary {
-      padding: 20px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      background-color: #e6f7f5;
-      margin: 10px;
-      border-radius: 5px;
+  <style>
+    .cont1,
+    .cont2,
+    .cont3{
+      display: flex; 
     }
 
-    .room_reserve_detail{
-      justify-content: center;
-      display: flex;
-      padding: 15px;
-      /* align-content: center; */
-    }
-
-    .det1{
-      flex: 1;
-      padding-left: 25px;
-      justify-content: left;
-    }
-
-    .det2{
-      padding-left: 30px;
-      text-align: justify
-    }
-
-    .reservation-summary h4{
-      text-align: center;
-    }
-
-    .add-room-btn,
-    .apply-btn,
-    .continue-btn {
-      background-color: #5acba1;
-      color: white;
-      border: none;
-      padding: 8px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .promo-code {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .total {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    /* style for the other part */
-    .container1 {
-      display: flex;
-      gap: 20px;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .room-list {
-      flex: 3;
-    }
-
-    .room-card {
-      display: flex;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    .room-card img {
-      width: 200px;
+    .cont1 .part1,.cont2 .part2,.cont3 p{
+      flex:1;
+    } 
+    
+    .cont1 img,.cont2 img,.cont3 img{
+      max-width: 400px;
       height: auto;
-      object-fit: cover;
-    }
-
-    .room-details {
       padding: 15px;
-      flex: 1;
     }
 
-    .room-details h3 {
-      font-family: 'Great Vibes';
-      margin: 0;
-      font-size: 34px;
-    }
-
-    .status {
-      color: #4CAF50;
-      font-weight: bold;
-      display: block;
-      margin-top: 5px;
-    }
-
-    .room-details p {
-      margin: 5px 0;
-      color: #555;
-    }
-
-    .room-details a {
-      color: #007BFF;
-      text-decoration: none;
-      display: block;
-      margin-top: 10px;
-    }
-
-    button {
-      padding: 8px 12px;
-      border: none;
-      background-color: #009688;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #00796B;
-    }
-
-    .search_part {
-      max-height: fit-content;
-    }
-
-    .search-container {
-      background-color: #fff;
-      padding: 20px 30px;
-      border-radius: 8px;
+    .C1,
+    .C2,
+    .C3{
+      /* border: 2px solid #8B4513; */
+      margin: 15px;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 600px;
-      width: 100%;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 10px;
+      border-color: rgb(75, 201, 201);
+    }
+    .C3 *,.C2 *,.C1 *{
+      margin: 5px;
     }
 
-    .search-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    button{
+      background-color: rgb(104, 194, 247);
+      border-radius: 10px;
+      width: 30%;
+      height: 50px;
     }
 
-    .search-input,
-    .date-input,
-    .guest-input {
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 14px;
+    button:hover{
+      background-color: aqua;
     }
 
-    .date-inputs {
-      display: flex;
-      gap: 10px;
+    .content h1{
+      padding-top: 10px;
+      color: rgb(127, 255, 255);
     }
 
-    .search-button {
-      padding: 10px;
-      background-color: #ff6600;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+    @media (max-width:768px){
+      button{
+      background-color: rgb(104, 194, 247);
+      border-radius: 10px;
+      width: 90%;
+      height: 50px;
+      }
 
-    .search-button:hover {
-      background-color: #ff4500;
+      .cont1 img,.cont2 img,.cont3 img{
+        display: none;
+      }
     }
-  </style> -->
+  </style>
+
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Append
-  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="starter-page-page">
@@ -298,17 +178,69 @@
     <section id="starter-section" class="starter-section section">
 
       <div class="container" data-aos="fade-up">
-        <div class="col-lg-4">
-            <div class="pricing-item">
-              <h3>Quantum Healing</h3>
-              <p><b>Rediscover harmony by aligning your mind, body, and soul with the universe's energy.</b><br>
-                In this session, the owner channels healing energies to clear emotional blocks, balance energy fields, and rejuvenate your soul. Experience physical, emotional, and spiritual well-being.  
-              </p>
-              <h4><sup>₹</sup>1200</h4>
-              <p>Duration: 1 hour</p> 
-              <div class="text-center"><a href="booked" class="buy-btn">Book-Now</a></div>
+        <div class="content">
+          <div class="C1">
+            <h1><b>Quantum Healing</b></h1>
+            <div class="cont1">
+              <div class="part1">
+                <p>
+                  <b>Rediscover harmony by aligning your mind, body, and soul with the universe's energy.</b>  
+                  <br>In this session, the owner channels healing energies to clear emotional blocks, balance energy fields, and rejuvenate your soul. Experience physical, emotional, and spiritual well-being.  
+                </p>
+                <ul>
+                  <li>Duration: 1 hour </li>
+                  <li>Price: ₹1,500 /-</li>
+                </ul>
+                <center>
+                  <button>Book</button>
+                </center>
+              </div>
+              <img src="assets/img/booking_well.jpg">
             </div>
-          </div><!-- End Pricing Item -->
+            
+          </div><!-- ending of the booking wellness -->
+
+          <div class="C2">
+            <h1><b>Past Life Regression</b></h1>
+            <div class="cont2">
+              <div class="part2">
+                <p>
+                  <b>Travel through time and uncover the wisdom of your past lives.</b> 
+                  <br>This session takes you on a deep meditative journey to access memories from past lives, helping resolve current-life challenges and offering profound self-awareness.  
+                </p>
+                <ul>
+                  <li>Duration: 90 minutes</li>
+                  <li>Price: ₹2,500 /-</li>
+                </ul>
+                <center>
+                  <button>Book</button>
+                </center>
+              </div>
+              <img src="assets/img/wellness_booking/part.jpg">
+            </div>
+          </div><!-- ending of the booking wellness -->
+          
+          <div class="C3">
+            <h1><b>Psychic Reading</b></h1>
+            <div class="cont3">
+              <div class="part3">
+                <p>
+                  <b>Reveal the hidden truths of your Earthly and Galactic soul.</b>  
+                  <br>This intuitive session provides insights into your soul's journey, from Earth’s ancient history to cosmic origins, offering clarity, guidance, and empowerment for your present life path.  
+                </p>
+                <ul>
+                  <li>Duration: 1 hour</li>
+                  <li>Price: ₹5,000 /-</li>
+                </ul>
+                <center>
+                  <button>Book</button>
+                </center>
+              </div>
+              <img src="assets/img/wellness_booking/Psychic-reading.jpg">
+            </div>
+          </div><!-- ending of the booking wellness -->
+
+        </div>
       </div>
 
     </section><!-- /Starter Section Section -->
