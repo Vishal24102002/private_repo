@@ -527,15 +527,15 @@
                 </div>
               </div>
               <center><p id="room_rev">1 room, 2 adults, 1 night</p>
-              <button class="add-room-btn">Please add rooms</button>
+              <!-- <button class="add-room-btn">Please add rooms</button> -->
 
               <div class="promo-code">
                 <label for="promo-code">promo code</label>
-                <input type="text" id="promo-code" placeholder="Enter code" style="width=60px;">
-              </div>
-              <!-- <button class="apply-btn">Apply</button> -->
+                <input type="text" id="promo-code" placeholder="Enter code" style="width:120px;">
+                <button class="apply-btn">Apply</button>
+              </div>           
               <div class="total">
-                <p>Total: <span>₹0.00</span></p>
+                <p>Total: ₹ <span id="room_price">₹0.00</span></p>
               </div>
               <button class="continue-btn">Continue</button>
               </center>
@@ -630,50 +630,6 @@
   
 
   <!-- Main JS File -->
-  <script>
-    // Select elements
-    const moreDetailsBtn = document.getElementById("moreDetails1");
-    const popup = document.getElementById("popup_basic");
-    const closePopupBtn = document.getElementById("closePopup");
-    
-    const moreDetailsBtn2 = document.getElementById("moreDetails2");
-    const popup2 = document.getElementById("popup_infinity");
-    const closePopupBtn2 = document.getElementById("closePopup2");
-    
-
-    // Show popup
-    moreDetailsBtn.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent the default anchor behavior
-        popup.style.display = "flex";
-    });
-
-    moreDetailsBtn2.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent the default anchor behavior
-        popup2.style.display = "flex";
-    });
-
-    // Close popup
-    closePopupBtn.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
-
-    closePopupBtn2.addEventListener("click", () => {
-        popup2.style.display = "none";
-    });
-
-    // Close popup when clicking outside the content
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-            popup.style.display = "none";
-        }
-    });
-
-    popup2.addEventListener("click", (e) => {
-        if (e.target === popup2) {
-            popup2.style.display = "none";
-        }
-    });
-  </script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/booking.js"></script>
 </body>
