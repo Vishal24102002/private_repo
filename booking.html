@@ -168,8 +168,6 @@
       background-color: #8bffd4;
     }
 
-
-
     .search_part {
       max-height: fit-content;
     }
@@ -233,9 +231,9 @@
 
         .popup-content {
             background: white;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
-            width: 80%;
+            width: 95%;
             max-width: 500px;
             text-align: center;
         }
@@ -244,17 +242,17 @@
             margin-bottom: 15px;
         }
 
-        .popup-content ul li{
-          list-style-position: inside; /* Ensure the marker is inside the content box */
-          text-align: left; /* Align the text to the left */
-          margin-left: 0; /* Optional: Adjust the margin if needed */
-          padding-left: 20px; /* Optional: Add padding to maintain spacing */
-        }
+        /* .popup-content ul li{
+          list-style-position: inside; /* Ensure the marker is inside the content box
+          } */
 
 
         .popup-content p {
-            margin: 10px 0;
-        }
+            margin: 25px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left
+          }
 
         .popup-content button {
             background-color: #ff4d4d;
@@ -267,6 +265,38 @@
 
         .popup-content button:hover {
             background-color: #cc0000;
+        }
+
+        @media (max-width:468px){
+          .room-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+          }
+          .room-card img {
+            width: auto;
+            height: 280px;
+            object-fit: cover;
+          }
+
+        }
+        @media (max-width:768px){
+          .container1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+          }
+
+          .room-list {
+            flex: 1;
+          }
+
         }
   </style>
   <link href="assets/css/main.css" rel="stylesheet">
@@ -392,7 +422,7 @@
 
             <div class="popup_basic" id="popup_basic">
               <div class="popup-content">
-                  <h3>Basic Room</h3>
+                  <h3 style="font-family: 'Great Vibes';"><b>Basic Room</b></h3>
                   
                   <b><i>Services</i></b>
                   <ol>
@@ -425,9 +455,9 @@
 
             <div class="popup_infinity" id="popup_infinity">
               <div class="popup-content">
-                  <h3>Infinity Room</h3>
+                  <h3 style="font-family: 'Great Vibes';"><b>Infinity Room</b></h3>
                   
-                  <b><i>Services</i></b>
+                  <center><b><i>Services</i></b></center>
                   <ol>
                   <li>Breakfast, Lunch & dinner included</li>
                   <li>Activity :
@@ -443,8 +473,8 @@
                     <li>Grounding & Healing connection</li>
                     <li>Creative & artist activity</li>
                   </ul></li>
-                  </li>Explore nearby river and beach.</li>
-                  </li>Book paid experiences like kayaking, sanctuary temple, spice farm trip (safari)</li>
+                  <li>Explore nearby river and beach.</li>
+                  <li>Book paid experiences like kayaking, sanctuary temple, spice farm trip (safari)</li>
                   </ol>
 
 
@@ -477,7 +507,7 @@
               <div class="search-container">
                 <h2>Book-Now</h2>
                 <form class="search-form">
-                  <input type="text" placeholder="Area, Landmark or Property Name" class="search-input">
+                  <input type="text" placeholder="stay Plan/ Package" class="search-input">
 
                   <div class="date-inputs">
                     <input type="date" class="date-input" id="date-input-check-in" placeholder="Check-in">
