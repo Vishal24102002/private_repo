@@ -830,17 +830,20 @@ organic part css is over here to edit it make the css changes here
 /* css code for the registration webpage  */
 
 .card {
-  background-color: #00f6d1;;
+  background-color: #00f6d1;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 500px;
-  width: 100%;
+  object-fit: fill;
+  width: 90%;
   margin: 20px;
 }
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: #52565a;
 }
 .lab {
   display: block;
@@ -851,7 +854,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
-input[type="tel"] {
+input[type="tel"],input[type="file"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -860,14 +863,18 @@ input[type="tel"] {
 }
 input[type="radio"] {
   margin-right: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 .gender-label {
   margin-right: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 input[type="submit"] {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #00f6d1;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -875,7 +882,7 @@ input[type="submit"] {
   font-size: 16px;
 }
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #03a78e;
 }
 
 
