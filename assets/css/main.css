@@ -1742,16 +1742,20 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-  padding: 10px;
+.faq .content .pls {
+  background-color: #82f9e7;
+  color: #007f6c;
+  border-radius: 35px;
+  text-align: right;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-right: 15px;
 }
 
-.faq .content p {
+/* .faq .content p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
+} */
 
 .faq .faq-container .faq-item {
   background-color: var(--surface-color);
