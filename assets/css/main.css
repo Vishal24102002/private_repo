@@ -933,7 +933,7 @@ input[type="submit"]:hover {
   font-weight: 700;
   margin-top: 10%;
   padding-bottom: 10%;
-  font-family:'PandoraFont', serif;
+  font-family:'PandoraFont', serif !important;
 
   /* text-shadow: 
                 2px 2px 0 #00f6d1,   
