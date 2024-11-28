@@ -920,12 +920,9 @@ input[type="submit"]:hover {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 @font-face {
   font-family: 'PandoraFont';
-  src: url('assets/Font/Pandora.otf') format('opentype');
+  src: url('/assets/Font/Pandora.woff') format('woff');
 }
 
 .page-title .heading h1 {
