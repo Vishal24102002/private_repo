@@ -925,7 +925,7 @@ input[type="submit"]:hover {
 
 @font-face {
   font-family: 'PandoraFont';
-  src: url('assets/fonts/Pandora-Bold-PersonalUse.otf') format('opentype');
+  src: url('assets/Font/Pandora.otf') format('opentype');
 }
 
 .page-title .heading h1 {
