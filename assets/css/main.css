@@ -10,6 +10,12 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'PandoraFont';
+  src: url('assets/Font/Pandora.woff') format('woff');
+}
+
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -918,11 +924,6 @@ input[type="submit"]:hover {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-@font-face {
-  font-family: 'PandoraFont';
-  src: url('/assets/Font/Pandora.woff') format('woff');
 }
 
 .page-title .heading h1 {
