@@ -819,6 +819,7 @@ organic part css is over here to edit it make the css changes here
 }
 .org-section img:hover {
   scale: 1.1;
+  border: 5px solid gold;
 }
 .org-section .org-content {
   flex: 1;
