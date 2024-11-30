@@ -2216,6 +2216,7 @@ section,
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
+  border: 2px solid var(--accent-color);
 }
 
 .contact .info-item i {
