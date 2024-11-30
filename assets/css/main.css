@@ -1092,7 +1092,7 @@ section,
   font-size: 20px;
 }
 
-@media (max-width:768px) {
+/* @media (min-width:768px) {
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 20%);
     font-size: 20px;
@@ -1103,7 +1103,7 @@ section,
     font-weight: 700;
     font-size: 14px;
   }
-}
+} */
 
 .hero .sign-up-form {
   margin-top: 20px;
@@ -1271,7 +1271,7 @@ section,
   margin-top: -40px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
@@ -1283,7 +1283,7 @@ section,
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .features .features-item+.features-item {
@@ -1478,7 +1478,7 @@ section,
   min-height: 500px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .features .features-item .features-img-bg {
     min-height: 300px;
   }
