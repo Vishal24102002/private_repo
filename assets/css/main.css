@@ -1082,16 +1082,27 @@ section,
 .hero h2 {
   white-space: nowrap;
   margin: 0;
-  /* font-size: 44px; */
   font-weight: 700;
   font-size: 2.5em;
-
 }
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 5px 0 0 0;
   font-size: 20px;
+}
+
+@media (max-width:768px) {
+  .hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    font-size: 20px;
+  }
+
+  .hero h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+  }
 }
 
 .hero .sign-up-form {
