@@ -1978,12 +1978,14 @@ section,
 
 .call-to-action .container {
   position: relative;
+  /* height: 290px; */
   z-index: 3;
 }
 
-.call-to-action h3 {
-  font-size: 28px;
+.call-to-action h2 {
+  font-size: 32px;
   font-weight: 700;
+  /* padding-bottom: 20px; */
   color: var(--default-color);
 }
 
@@ -2010,6 +2012,32 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.call-to-action .container .owner-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.owner-img{
+  flex: 1;
+  width: auto;
+}
+
+.owner-img .imgow{
+  width: fit-content;
+  height: 100%;
+  border: 5px solid gold;
+  /* scale: 0.5; */
+  margin-top: 30px;
+  object-fit: contain; /* Ensures the image fills the container */
+  border-radius: 5px; 
+}
+
+.owner-cont .owner-bio{
+  width: 100%;
+  padding: 10px;
+  height: 400px;
+  background-color: #59f5dead;
+}
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
