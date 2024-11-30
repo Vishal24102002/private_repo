@@ -11,6 +11,7 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 @font-face {
   font-family: 'PandoraFont';
   src: url('Font/Pandora.otf') format('opentype');
@@ -260,13 +261,12 @@ h6 {
   --nav-hover-color: #e84545;
 }
 
-@media (min-width: 678px){
+@media (min-width: 768px){
   .page-title .heading h1 {
-    font-size: 100px;
+    font-size: 70px;
     font-weight: 700;
-    margin-top: 10%;
-    padding-bottom: 10%;
-    font-family:'PandoraFont', serif !important;
+    margin-top: 1%;
+    font-family:"Pompiere", sans-serif !important;
     text-shadow: 
                   2px 2px 0 gold,   
                   -2px 2px 0 gold,  
@@ -924,7 +924,6 @@ input[type="submit"]:hover {
 .image_logo_neav{
   height: 80px;
   width: 80px;
-  /* overflow: hidden; */
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -1131,24 +1130,6 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  .page-title .heading h1 {
-    font-size: 45px;
-    font-weight: 700;
-    padding-top: 130px;
-    padding-bottom: 130px;
-    color:#f9f9f9;
-    background-color: transparent;
-  }
-}
 
 /*--------------------------------------------------------------
 # Clients Section
@@ -1284,6 +1265,18 @@ section,
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .features .features-item+.features-item {
+    margin-top: 40px;
   }
 }
 
@@ -1425,12 +1418,6 @@ section,
 
 .features .features-item+.features-item {
   margin-top: 100px;
-}
-
-@media (max-width: 768px) {
-  .features .features-item+.features-item {
-    margin-top: 40px;
-  }
 }
 
 .features .features-item h3 {
