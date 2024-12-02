@@ -141,9 +141,18 @@
       background-color: greenyellow;
     }
 
+    .reg_main_body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+      flex-direction: row;
+    }
+
     @media (max-width: 668px)  {
-  /* Adjust form and popup for smaller screens */
-  #successPopup {
+    /* Adjust form and popup for smaller screens */
+    #successPopup {
     width: 90%;
     display: none;
       /* Hidden by default */
@@ -170,6 +179,11 @@
     animation: spin 1s linear infinite;
     display: inline-block;
   }
+
+  .reg_main_body{
+    flex-direction: column;
+  }
+
 }
   </style>
 
@@ -284,11 +298,7 @@
         </div>
       </nav>
     </div><!-- End Page Title -->
-    <div class="reg_main_body" style="display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;">
+    <div class="reg_main_body">
       <div class="card">
         <h4>Volunteers</h4>
         <form onsubmit="event.preventDefault(); submitForm();">
