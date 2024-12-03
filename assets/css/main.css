@@ -13,9 +13,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 @font-face {
-  font-family: 'PandoraFont';
-  src: url('Font/Pandora.otf') format('opentype');
+  font-family: 'VincentFont';
+  src: url('Font/Vincentia.otf') format('Opentype');
 }
+@font-face {
+  font-family: 'PandoraFont';
+  src: url('Font/Pandora-Logo-Font.ttf') format('TypeText');
+}
+
 
 /* Fonts */
 :root {
@@ -261,12 +266,12 @@ h6 {
   --nav-hover-color: #e84545;
 }
 
-@media (min-width: 768px){
+@media (max-width: 768px){
   .page-title .heading h1 {
-    font-size: 65px;
+    font-size: 105px;
     font-weight: 700;
     margin-top: 1%;
-    font-family:"Pompiere", sans-serif !important;
+    font-family:"VincentFont", serif !important;
     text-shadow: 
                   2px 2px 0 gold,   
                   -2px 2px 0 gold,  
@@ -922,7 +927,7 @@ input[type="submit"]:hover {
   }
 }
 .image_logo_neav{
-  height: 80px;
+  height: 20%;
   width: 80px;
   display: flex;
   justify-content: center; 
@@ -947,18 +952,17 @@ input[type="submit"]:hover {
 }
 
 .page-title .heading h1 {
-  font-size: 135px;
+  font-size: 85px;
   font-weight: 700;
   margin-top: 5%;
   padding-bottom: 5%;
-  font-family:'PandoraFont', serif !important;
-
+  font-family:'VincentFont', serif !important;
   text-shadow: 
                 2px 2px 0 gold,   
                 -2px 2px 0 gold,  
                 2px -2px 0 gold,  
                 -2px -2px 0 gold;
-  color: white;
+  color: var(--accent-color);
   background-color: transparent;
 }
 
@@ -1092,7 +1096,7 @@ section,
   font-size: 20px;
 }
 
-/* @media (min-width:768px) {
+@media (min-width:768px) {
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 20%);
     font-size: 20px;
@@ -1103,7 +1107,11 @@ section,
     font-weight: 700;
     font-size: 14px;
   }
-} */
+
+  .features .features-item+.features-item {
+    margin-top: 40px;
+  }
+}
 
 .hero .sign-up-form {
   margin-top: 20px;
@@ -1276,18 +1284,6 @@ section,
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
-  }
-
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .features .features-item+.features-item {
-    margin-top: 40px;
   }
 }
 

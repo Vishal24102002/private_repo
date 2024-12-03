@@ -18,6 +18,7 @@
       /* gap: 15px; */
       padding:20px;
     }
+
     .activity .head{
       margin: auto;
       justify-content: center;
@@ -32,6 +33,24 @@
     .activity img{
       width: auto;
       height: 400px;
+    }
+
+    @media (max-width: 768px){
+      .act1,.act2,.act3,.act4,.act5{
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-spacing: 10px;
+        border-color: aquamarine;
+        border-width: 5px;
+        /* gap: 15px; */
+        padding:20px;
+      }
+
+      .activity img{
+        width: 350px;
+        height: auto;
+    }
     }
   </style>
 
@@ -166,6 +185,7 @@
           </div>
           <img src="assets/img/activity/meditate-1851165_1280 (1).jpg">
         </div>
+
         <div class="act3">
           <div class="head">
             <h3><b>Breathwork</b></h3>
@@ -173,6 +193,7 @@
           </div>
           <img src="assets/img/activity/BREATHWORK.png">
         </div>
+
         <div class="act4">
           <div class="head">
             <h3><b>Dance Movement</b></h3>
