@@ -787,7 +787,7 @@ h6 {
 
 .info-button {
   max-width: fit-content;
-  background-color: #1d3c34;
+  background-color: #00ab92;
   color: #ffffff;
   padding: 10px 15px;
   text-decoration: none;
@@ -798,7 +798,26 @@ h6 {
 }
 
 .info-button:hover {
-  background-color: transparent 40;
+  background-color: var(--accent-color);
+  color: gold;
+  font-weight: bold;
+}
+
+.card_guide{
+  width: 30%;
+  border: 10px solid gold;
+  padding: 10px;
+  margin: auto;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card_guide .guide-img{
+  width: 220px;
+  height: auto;
+  border-radius: 20px;
 }
 
 /* ----------------------------------------------------------------------
@@ -1464,18 +1483,18 @@ section,
   color: var(--accent-color);
 }
 
-.features .features-item img {
+.details .sub_detail img {
   border: 6px solid var(--surface-color);
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
-.features .features-item .features-img-bg {
+/* .details .sub_detail .features-img-bg {
   position: relative;
   min-height: 500px;
 }
 
 @media (min-width: 640px) {
-  .features .features-item .features-img-bg {
+  .details .sub_detail .features-img-bg {
     min-height: 300px;
   }
 }
@@ -1487,29 +1506,52 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
-.features .features-item .image-stack {
+.details .sub_detail .image-stack {
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, 1fr);
 }
 
-.features .features-item .image-stack .stack-back {
-  grid-column: 4/-1;
+.details .sub_detail .image-stack .stack-back {
+  grid-column: 6/-1;
   grid-row: 1;
-  width: 100%;
+  width: auto;
+  height: 60%;
   z-index: 1;
 }
 
-.features .features-item .image-stack .stack-front {
+.details .sub_detail .image-stack .stack-front {
   grid-row: 1;
   grid-column: 1/span 8;
-  margin-top: 20%;
-  width: 100%;
+  margin-top: 10%;
+  width: auto;
+  height: 40%;
   z-index: 2;
 }
 
+.sub_detail{
+  display: flex;
+}
+
+.main_detail{
+  display: flex;
+  border: 5px solid gold;
+  background-color: var(--accent-color);
+}
+
+.main_detail .info-items{
+  border: 5px solid gold;
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  width: auto;
+}
+
+.main_detail .wcont1{
+  width: 1300px;
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
