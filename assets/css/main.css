@@ -1115,7 +1115,7 @@ section,
   font-size: 20px;
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 20%);
     font-size: 20px;
@@ -1486,6 +1486,28 @@ section,
 .details .sub_detail img {
   border: 6px solid var(--surface-color);
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.features .image-stack{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.features .image-stack .stack-back {
+  grid-column: 6/-1;
+  grid-row: 1;
+  width: 100%;
+  /* height: 60%; */
+  z-index: 1;
+}
+
+.features .image-stack .stack-front {
+  grid-row: 1;
+  grid-column: 1/span 8;
+  margin-top: 10%;
+  width: 100%;
+  z-index: 2;
 }
 
 /* .details .sub_detail .features-img-bg {
