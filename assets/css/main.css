@@ -1491,20 +1491,19 @@ section,
 .features .image-stack{
   display: grid;
   position: relative;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 2fr);
 }
 
 .features .image-stack .stack-back {
   grid-column: 6/-1;
   grid-row: 1;
   width: 100%;
-  /* height: 60%; */
   z-index: 1;
 }
 
 .features .image-stack .stack-front {
   grid-row: 1;
-  grid-column: 1/span 8;
+  grid-column: 1/span 10;
   margin-top: 10%;
   width: 100%;
   z-index: 2;
@@ -3265,25 +3264,19 @@ section,
 
 .work1,.work2,.work3,.work4{
   display: flex;
-  margin: 5px;
-  border: 5px solid gold;
-  background-color: white;
+  border-radius: 25px;
+  margin: 15px;
+  border: 5px solid var(--accent-color);
 }
 
 .workspace_content .cont_work{
   justify-content: center;
   text-align: center;
-  padding: auto;
+  padding: 10px;
   margin: auto;
 }
 
 .workspace_content img{
-  height: 250px;
-}
-
-.workspace_content{
-  background-color: var(--accent-color);
-  margin: 5px;
-  padding: 5px;
-  border: 5px solid gold;
+  height: 350px;
+  padding: 10px;
 }
