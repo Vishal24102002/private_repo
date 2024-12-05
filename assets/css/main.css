@@ -973,8 +973,8 @@ input[type="submit"]:hover {
 .page-title .heading h1 {
   font-size: 85px;
   font-weight: 700;
-  margin-top: 5%;
-  padding-bottom: 5%;
+  margin-top: 15%;
+  padding-bottom: 15%;
   font-family:'VincentFont', serif !important;
   text-shadow: 
                 2px 2px 0 gold,   
@@ -1129,6 +1129,21 @@ section,
 
   .features .features-item+.features-item {
     margin-top: 40px;
+  }
+
+  .page-title .heading h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    font-family:'VincentFont', serif !important;
+    text-shadow: 
+                  2px 2px 0 gold,   
+                  -2px 2px 0 gold,  
+                  2px -2px 0 gold,  
+                  -2px -2px 0 gold;
+    color: var(--accent-color);
+    background-color: transparent;
   }
 }
 
