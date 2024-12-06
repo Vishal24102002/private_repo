@@ -2088,26 +2088,36 @@ section,
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.owner-img{
-  flex: 1;
-  width: auto;
+  flex-wrap: nowrap;
 }
 
-.owner-img .imgow{
-  width: fit-content;
-  height: 100%;
+.owner_img{
+  margin-left: 20%;
+  align-items: center;
+}
+
+.imgow{
+  padding-top: 30%;
+}
+
+.imgow img{
   border: 5px solid gold;
-  /* scale: 0.5; */
   margin-top: 30px;
-  object-fit: contain; /* Ensures the image fills the container */
-  border-radius: 5px; 
+  padding: 1%;
+  flex: 1;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  max-height: fit-content;
 }
 
 .owner-cont .owner-bio{
   width: 100%;
   padding: 10px;
+  margin: auto;
   height: 400px;
+  overflow: scroll;
   background-color: #59f5dead;
 }
 /*--------------------------------------------------------------
