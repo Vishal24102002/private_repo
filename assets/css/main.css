@@ -805,8 +805,8 @@ h6 {
 
 .card_guide{
   width: 30%;
-  border: 10px solid gold;
   padding: 10px;
+  border: 3px solid gold
   margin: auto;
   margin-top: 15px;
   align-items: center;
@@ -818,6 +818,7 @@ h6 {
   width: 220px;
   height: auto;
   border-radius: 20px;
+  border: 3px solid var(--accent-color);
 }
 
 /* ----------------------------------------------------------------------
@@ -1576,7 +1577,8 @@ section,
 }
 
 .main_detail .info-items{
-  border: 5px solid gold;
+  border: 2px solid gold;
+  border-radius: 20px;
   background-color: white;
   padding: 15px;
   margin: 10px;
