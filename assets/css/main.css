@@ -1573,8 +1573,6 @@ section,
 
 .main_detail{
   display: flex;
-  border: 5px solid gold;
-  background-color: var(--accent-color);
 }
 
 .main_detail .info-items{
