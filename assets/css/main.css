@@ -806,7 +806,8 @@ h6 {
 .card_guide{
   width: 30%;
   padding: 10px;
-  border: 3px solid gold
+  border: 5px solid gold;
+  border-radius: 15px;
   margin: auto;
   margin-top: 15px;
   align-items: center;
