@@ -2025,7 +2025,7 @@ section,
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  padding: 80px 0;
+  padding: 30px 0;
   position: relative;
   clip-path: inset(0);
 }
@@ -2056,7 +2056,7 @@ section,
 }
 
 .call-to-action h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 700;
   /* padding-bottom: 20px; */
   color: var(--default-color);
@@ -2112,9 +2112,12 @@ section,
 }
 
 .owner-bio p{
-  width: 650px;
+  width: 100%;
 }
 
+text-center h2{
+
+}
 /* .owner-cont .owner-bio::-webkit-scrollbar-track {
   background: transparent;
 }
