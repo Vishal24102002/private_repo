@@ -12,6 +12,7 @@
 --------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @font-face {
   font-family: 'VincentFont';
   src: url('Font/Vincentia.otf') format('Opentype');
@@ -267,11 +268,18 @@ h6 {
 }
 
 @media (max-width: 768px){
+
+  .owner-cont{
+    display: flex;
+    flex-direction: column;
+  }
+
+
   .page-title .heading h1 {
     font-size: 105px;
     font-weight: 700;
     margin-top: 1%;
-    font-family:"VincentFont", serif !important;
+    font-family:  'Fjalla One', sans-serif !important;
     text-shadow: 
                   2px 2px 0 gold,   
                   -2px 2px 0 gold,  
@@ -971,19 +979,19 @@ input[type="submit"]:hover {
   background-repeat: no-repeat;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
-
+                                 
 .page-title .heading h1 {
   font-size: 85px;
   font-weight: 700;
   margin-top: 15%;
   padding-bottom: 15%;
-  font-family:'VincentFont', serif !important;
+  font-family: 'Fjalla One', sans-serif !important;
   text-shadow: 
                 2px 2px 0 gold,   
                 -2px 2px 0 gold,  
                 2px -2px 0 gold,  
                 -2px -2px 0 gold;
-  color: var(--accent-color);
+  color: white;
   background-color: transparent;
 }
 
@@ -1138,13 +1146,13 @@ section,
     font-weight: 700;
     margin-top: 5%;
     padding-bottom: 5%;
-    font-family:'VincentFont', serif !important;
+    font-family: 'Fjalla One', sans-serif !important;
     text-shadow: 
                   2px 2px 0 gold,   
                   -2px 2px 0 gold,  
                   2px -2px 0 gold,  
                   -2px -2px 0 gold;
-    color: var(--accent-color);
+    color: white;
     background-color: transparent;
   }
 }
@@ -2058,7 +2066,6 @@ section,
 .call-to-action h2 {
   font-size: 25px;
   font-weight: 700;
-  /* padding-bottom: 20px; */
   color: var(--default-color);
 }
 
@@ -2087,14 +2094,15 @@ section,
 
 .call-to-action .container .owner-cont{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+}
+
+.img_ow{
+  flex: 1;
+  position:relative;
 }
 
 .owner-cont img{
-  position: relative;
-  max-width: 200px;
+  max-width: 300px;
   margin: 10px;
   height: fit-content;
   border: 5px solid #ffd700;
@@ -2102,10 +2110,10 @@ section,
 }
 
 .owner-bio{
-  /* position: relative; */
+  position: relative;
   width: 100%;
   padding: 5px;
-  /* margin: auto; */
+  flex:3;
   height: fit-content;
   text-align: left;
   background-color: #59f5de9b;
