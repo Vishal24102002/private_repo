@@ -2094,21 +2094,25 @@ section,
 
 .owner-cont img{
   position: relative;
-  max-width: 300px;
-  margin: 5%;
+  max-width: 200px;
+  margin: 10px;
   height: fit-content;
   border: 5px solid #ffd700;
   border-radius: 10px;
 }
 
 .owner-bio{
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   /* margin: auto; */
-  height: auto;
+  height: fit-content;
   text-align: left;
   background-color: #59f5de9b;
+}
+
+.owner-bio p{
+  width: 650px;
 }
 
 /* .owner-cont .owner-bio::-webkit-scrollbar-track {
