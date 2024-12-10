@@ -978,9 +978,6 @@ input[type="submit"]:hover {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-                                 
-.page-title .heading .container{
   position: relative; 
   z-index: 3;
 }
