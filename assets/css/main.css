@@ -980,6 +980,11 @@ input[type="submit"]:hover {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
                                  
+.page-title .heading .container{
+  position: relative; 
+  z-index: 3;
+}
+
 .page-title .heading h1 {
   font-size: 85px;
   font-weight: 700;
@@ -996,8 +1001,10 @@ input[type="submit"]:hover {
   background-color: transparent;
   transform: translate(-50%, -20%);
   color: white;
+  text-align: center;
+  justify-content: center;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 1;
   }
 
   
