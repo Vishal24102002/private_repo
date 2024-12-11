@@ -305,6 +305,7 @@ h6 {
 
 .close_event{
   visibility: hidden;
+  display: none;
 }
 
 /* responsive for the mobile popup */
@@ -323,6 +324,7 @@ h6 {
     color: gold;
     font-weight: bold;
     background-color: var(--accent-color);
+    display: block;
   }
 
   .reg_event{
