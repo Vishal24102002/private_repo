@@ -355,6 +355,15 @@ h6 {
     color: white;
     background-color: transparent;
   }
+
+  .event_reg{
+    flex-direction: column;
+  }
+
+  .event_reg_card{
+    min-width: 100%;
+    flex:1;
+  }
 }
 
 /* registartion form for the event section */
@@ -1260,8 +1269,8 @@ section,
   .page-title .heading h1 {
     font-size: 45px;
     font-weight: 700;
-    margin-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 10%;
+    padding-bottom: 10%;
     font-family: 'Fjalla One', sans-serif !important;
     text-shadow: 
                   2px 2px 0 gold,   
