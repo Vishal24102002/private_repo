@@ -44,9 +44,12 @@
 
   <div id="overlay_event" onclick="closePopup()"></div>
     <div id="popup_event">
-        <h2><b>Latest Events</b></h2>
-        <p>Event details</p>
-        <button onclick="closePopup()">Close</button>
+      <h2><b>Latest Events</b></h2>
+      <p>Event details</p>
+      <div class="event_hor_pop">
+        <button class="close_event" onclick="closePopup()">Close</button>
+        <button onclick="Reg_event()">Register</button>
+      </div>
     </div>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -1031,15 +1034,19 @@
 
   <script>
     function openPopup() {
-        document.getElementById("popup").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
+        document.getElementById("popup_event").style.display = "block";
+        document.getElementById("overlay_event").style.display = "block";
     }
 
     function closePopup() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
+        document.getElementById("popup_event").style.display = "none";
+        document.getElementById("overlay_event").style.display = "none";
     }
-</script>
+
+    window.onload = function() {
+            openPopup();
+    };
+  </script>
 </body>
 
 </html>

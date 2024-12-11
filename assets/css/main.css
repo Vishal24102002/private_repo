@@ -269,16 +269,18 @@ h6 {
 
 
 #popup_event {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   top: 50%;
   left: 50%;
+  align-content: center;
   transform: translate(-50%, -50%);
+  border: 2px solid gold;
+  border-radius: 10px;
   width: 300px;
   padding: 20px;
-  background-color: white;
-  border: 2px solid #000;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 6px goldenrod;
   z-index: 1000;
 }
 
@@ -293,8 +295,22 @@ h6 {
   z-index: 999;
 }
 
-@media (max-width: 768px){
+#overlay_event .event_hor_pop button{
+  width: 100%;
+}
 
+.close_event{
+  display: none;
+}
+
+/* responsive for the mobile popup */
+@media (max-width:768) {
+  .event_hor_pop{
+    display: flex;
+  }  
+}
+
+@media (max-width: 768px){
   .owner-cont{
     display: flex;
     flex-direction: column;
