@@ -295,8 +295,10 @@ h6 {
   z-index: 999;
 }
 
-#overlay_event .event_hor_pop button{
+.event_hor_pop button{
   width: 100%;
+  height: 10%;
+  border-radius: 10px;
 }
 
 .close_event{
