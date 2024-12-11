@@ -357,6 +357,14 @@ h6 {
   }
 }
 
+/* registartion form for the event section */
+.event_reg{
+  display: flex;
+  justify-content: center;
+  gap:40px;
+  margin: 25px;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
