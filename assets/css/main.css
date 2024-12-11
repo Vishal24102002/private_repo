@@ -301,6 +301,7 @@ h6 {
   background-color: var(--accent-color);
   color: gold;
   font-weight: bold;
+  object-fit: cover;
 }
 
 .close_event{
@@ -363,6 +364,7 @@ h6 {
   .event_reg_card{
     min-width: 100%;
     flex:1;
+    color: #000;
   }
 }
 
@@ -375,14 +377,25 @@ h6 {
 }
 
 .event_reg_card{
-  width: 25%;
+  width: 30%;
   border-right: 6px solid gold;
   border-top: 6px solid gold;
   border-left: 2px solid goldenrod;
   border-bottom: 2px solid goldenrod;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
+
+/* #form_event{
+  min-height: 100%;
+  align-content: space-evenly; 
+}
+
+#form_event *{
+  object-fit: fill;
+  font-size: larger;
+  padding: 10px;
+} */
 
 /*--------------------------------------------------------------
 # Navigation Menu
