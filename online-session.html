@@ -25,12 +25,31 @@
       height: auto;
     }
 
+    .content_live_session{
+        display: flex;
+        gap: 30px;
+    }
+
     @media (max-width: 750px) {
       .img_event{
         width:100%;
         height:auto;
       }
     }
+
+    .flatpickr-calendar {
+        background-color: #f0f8ff; /* Light blue background */
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        filter: drop-shadow(0 10px 15px var(--accent-color));
+    }
+
+    .flatpickr-day.today {
+        background-color: aquamarine; /* Highlight today in red */
+        color: white;
+    }
+
   </style>
 
   <!-- Favicons -->
@@ -52,6 +71,11 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+   <!-- Flatpickr CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+
+
 
   <!-- =======================================================
   * Template Name: Append
@@ -162,10 +186,25 @@
     </div><!-- End Page Title -->
 
     <div class="container">
+        <div class="content_live_session">
+            <div id="calendar"></div>
+            <div class="detail_live_session">
+                <h3>Details</h3>
+                <form>
+                    <label>Name :</label>
+                    <input type="text">
 
-        
+                    <label>Email :</label>
+                    <input type="text">
 
+                    <label>Age :</label>
+                    <input type="number">
 
+                    <label>Mobile No.</label>
+                    <input type="tel">
+                </form>
+            </div>
+        </div>
     </div>
   </main>
 
@@ -251,6 +290,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+      // Initialize Flatpickr with inline mode
+      flatpickr("#calendar", {
+          inline: true,  // Makes the calendar always visible
+          dateFormat: "Y-m-d", // Customize the format
+      });
+  </script>
 
 </body>
 
