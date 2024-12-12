@@ -31,6 +31,21 @@
         margin: 30px;
     }
 
+    .detail_live_session{
+        flex: 2;
+    }
+
+    .labels{
+        display: flex;
+        align-content: space-evenly;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .labels input{
+        max-width: 150px;
+    }
+
     @media (max-width: 750px) {
       .img_event{
         width:100%;
@@ -190,19 +205,28 @@
         <div class="content_live_session">
             <div id="calendar"></div>
             <div class="detail_live_session">
-                <h3><b></b></h3>
+                <h3><b>Details</b></h3>
                 <form>
-                    <label>Name :</label>
-                    <input type="text">
-
-                    <label>Email :</label>
-                    <input type="text">
-
-                    <label>Age :</label>
-                    <input type="number">
-
-                    <label>Mobile No.</label>
-                    <input type="tel">
+                    <div class="labels">
+                        <span>Name : </span>
+                        <input type="text">
+                    </div>
+                    <div class="labels">
+                        <span>Age : </span>
+                        <input type="number">
+                    </div>
+                    <div class="labels">
+                        <span>Mobile No. : </span>
+                        <input type="tel">
+                    </div>
+                    <div class="labels">
+                        <span>Email : </span>
+                        <input type="email">
+                    </div>
+                    <div class="labels">
+                        <span>slot : </span>
+                        <input type="time">
+                    </div>
                 </form>
             </div>
         </div>
