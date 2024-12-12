@@ -769,6 +769,10 @@ h6 {
   font-size: 13px;
 }
 
+.collegues{
+  display:flex;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -935,7 +939,8 @@ h6 {
 }
 
 .card_guide{
-  width: 30%;
+  width: 350px;
+  /* height: 750px; */
   padding: 10px;
   border: 5px solid gold;
   border-radius: 15px;
