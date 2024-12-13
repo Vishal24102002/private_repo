@@ -73,13 +73,17 @@ header {
 
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 10px 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+    filter: drop-shadow(0 10px 35px var(--contrast-color));
+    color: gold;
+    font-size: 20px;
+    margin: 5px;
 }
 
 main {
