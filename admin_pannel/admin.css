@@ -1,4 +1,12 @@
 /* styles.css */
+:root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #00f6d1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: gold; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -14,6 +22,7 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 10px 15px var(--accent-color));
 }
 
 .login-container h1 {
@@ -29,17 +38,19 @@ label {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
+    max-width: 90%;
+    min-width: 90%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background: #007BFF;
+    background: #1cbda5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -48,11 +59,13 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: var(--accent-color);
+    color: gold;
+    font-weight: bold;
 }
 
 header {
-    background: #007BFF;
+    background: #00f6d1;
     color: white;
     padding: 10px 20px;
     text-align: center;
