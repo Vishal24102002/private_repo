@@ -12,10 +12,15 @@ document.getElementById("select_infi").addEventListener("click",(e) =>{
   document.getElementById("room_price").innerText= 7600
 });
 
-document.getElementById("booking_owner").addEventListener("click", (e) => {
-  if (e.target === document.getElementById("booking_owner")) {
-      document.getElementById("booking_owner").style.display = "none";
-  }
+// document.getElementById("booking_owner").addEventListener("click", (e) => {
+//   if (e.target === document.getElementById("booking_owner")) {
+//       document.getElementById("booking_owner").style.display = "none";
+//   }
+// });
+
+document.getElementById("booking_owner_submit").addEventListener("click",(e) =>{
+  e.preventDefault();
+  document.getElementById("booking_owner").style.display = "none";
 });
 
 document.getElementById("select_basic").addEventListener("click",(e) =>{
