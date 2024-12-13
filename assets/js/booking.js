@@ -7,13 +7,24 @@ const popup2 = document.getElementById("popup_infinity");
 const closePopupBtn2 = document.getElementById("closePopup2");
 document.getElementById("select_infi").addEventListener("click",(e) =>{
   e.preventDefault();
+  document.getElementById("booking_owner").style.display="flex";
+  document.getElementById("booking_owner").style.flexDirection="column";
   document.getElementById("room_price").innerText= 7600
+});
+
+document.getElementById("booking_owner").addEventListener("click", (e) => {
+  if (e.target === document.getElementById("booking_owner")) {
+      document.getElementById("booking_owner").style.display = "none";
+  }
 });
 
 document.getElementById("select_basic").addEventListener("click",(e) =>{
   e.preventDefault();
+  document.getElementById("booking_owner").style.display="flex";
+  document.getElementById("booking_owner").style.flexDirection="column";
   document.getElementById("room_price").innerText= 3600
 });
+
 // Show popup
 moreDetailsBtn.addEventListener("click", (e) => {
     e.preventDefault(); // Prevent the default anchor behavior
