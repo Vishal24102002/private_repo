@@ -103,3 +103,9 @@ function getSelectedcheckinDate() {
     }
     
   }
+
+  const data = {
+    name: "John",
+    email: "john@example.com"
+};
+

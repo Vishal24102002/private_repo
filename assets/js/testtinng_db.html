@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attach Function to Button</title>
+</head>
+<body>
+    <button id="sendButton">Send Data</button>
+
+    <script>
+        document.getElementById("sendButton").onclick = function () {
+            const data = {
+                name: "John Doe",
+                email: "john.doe@example.com"
+            };
+
+            fetch("https://vishal6596.pythonanywhere.com/add", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json" // Ensure JSON data
+                },
+                body: JSON.stringify(data) // Convert JS object to JSON
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log("Server Response:", result);
+                alert("Data Sent Successfully!");
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to Send Data.");
+            });
+        };
+    </script>
+    </script>
+</body>
+</html>
