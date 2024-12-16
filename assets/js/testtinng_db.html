@@ -8,31 +8,31 @@
 <body>
     <button id="sendButton">Send Data</button>
 
-    <script>
+    <!-- <script>
         document.getElementById("sendButton").onclick = function () {
-            const data = {
-                name: "John Doe",
-                email: "john.doe@example.com"
-            };
-
-            fetch("https://vishal6596.pythonanywhere.com/add", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json" // Ensure JSON data
-                },
-                body: JSON.stringify(data) // Convert JS object to JSON
-            })
-            .then(response => response.text())
-            .then(result => {
-                console.log("Server Response:", result);
-                alert("Data Sent Successfully!");
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("Failed to Send Data.");
-            });
+    const data = {
+        name:"yash",
+        email:"yash@gmail.com"
         };
-    </script>
-    </script>
+
+    fetch("https://Piyush2510.pythonanywhere.com/add", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json" // Ensure JSON data
+        },
+        body: JSON.stringify(data) // Convert JS object to JSON
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log("Server Response:", result);
+        alert("booked Successfully!");
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Failed book right now.Try again in some time");
+    });
+};
+    </script> -->
+    <script src="api_booking.js"></script>
 </body>
 </html>
