@@ -499,10 +499,9 @@
                   <span>Email :</span><br><br>
                 </div>
                 <div class="fields">
-                  <input type="text" required>
-                  <input type="tel" required>
-                  <input type="text" required>
-                  <input type="email" required>
+                  <input type="text" id="guest_name" required>
+                  <input type="tel" id="guest_phone" required>
+                  <input type="email" id="guest_email" required>
                 </div>
               </div>
               <button id="booking_owner_submit">submit</button>
@@ -582,11 +581,11 @@
                     <input type="date" class="date-input" id="date-input-check-out" placeholder="Check-out">
                   </div>
 
-                  <select class="guest-input" id="guestSelect">
+                  <select class="guest-input" id="guestselect">
                     <option value="2 Adults, 1 Room">2 Adults | 1 Room</option>
-                    <option value="2 Adults, 1 Room">1 Adults | 1 Room</option>
-                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
-                    <option value="2 Adults, 1 Room">2 Adults | 2 Room</option>
+                    <option value="1 Adults, 1 Room">1 Adults | 1 Room</option>
+                    <option value="2 Adults, 2 Room">2 Adults | 2 Room</option>
+                    <option value="2 Adults, 2 Room">2 Adults | 2 Room</option>
                     <!-- Add more options as needed -->
                   </select>
 
@@ -617,7 +616,7 @@
               <div class="total">
                 <p>Total: ₹ <span id="room_price">₹0.00</span></p>
               </div>
-              <div><button class="custom_pay" onclick="book()">Pay with QR</button></div>
+              <div><button class="custom_pay" id="sendButton">Pay with QR</button></div>
               <div id="paypal-button-container" style="height: fit-content;"></div>
               <!-- <button class="continue-btn">Continue</button> -->
               </center>
@@ -717,33 +716,6 @@
     src="https://www.paypal.com/sdk/js?client-id=AVkFGBdv07Ve31wa2ToX4FqTCjvJ53WEvRv87Cs4vgEKQbyaQmPewhWFGT0gcO4h3LyNfks_OWQ1hpsV&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
     data-sdk-integration-source="developer-studio"
   ></script>
-
-  <script>
-    async function book(){
-        // Collect form data
-        const name = document.getElementById('name').value;
-        const age = document.getElementById('age').value;
-
-        // POST the data as JSON
-        try {
-            const response = await fetch('http://127.0.0.1:5000/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age }) // Send as JSON
-            });
-
-            // Handle the JSONified response
-            const result = await response.json();
-            console.log(result);
-            alert(`Response: ${JSON.stringify(result)}`);
-        } catch (error) {
-            console.error('Error:', error);
-        }
-      }
-  </script>
-  
 
   <script>
     paypal.Buttons({

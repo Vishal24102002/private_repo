@@ -89,7 +89,7 @@ function getSelectedcheckinDate() {
       alert("check out date can't be less than check in date")
     }
     else{
-      const selectElement = document.getElementById("guestSelect");
+      const selectElement = document.getElementById("guestselect");
 
       // Get the selected value
       const selectedValue = selectElement.value;
@@ -103,9 +103,4 @@ function getSelectedcheckinDate() {
     }
     
   }
-
-  const data = {
-    name: "John",
-    email: "john@example.com"
-};
 

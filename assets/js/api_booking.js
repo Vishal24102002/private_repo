@@ -1,14 +1,14 @@
 document.getElementById("sendButton").onclick = function () {
-    form_data = {
-        'name': "vishal",
-        'mobile_number': 8882083822,
-        'email': "vishalsharma659612@gmail.com",
-        'check_in': 12-12-2024,
-        'check_out': 24-12-2024,
-        'number_of_adults': 2,
-        'room_number': 101,
-        'transaction_number': 1234,
-        'status':"booked"
+    data = {
+        'name': document.getElementById("guest_name").value,
+        'mobile_number': document.getElementById("guest_phone").value,
+        'email': document.getElementById("guest_email").value,
+        'check_in': document.getElementById("date-input-check-in").value,
+        'check_out': document.getElementById("date-input-check-out").value,
+        'number_of_adults': document.getElementById("guestselect").value.split(",")[0],
+        'room_number': document.getElementById("guestselect").value.split(",")[1],
+        'transaction_number': "1234",
+        'status':"Booked"
     }
 
     fetch("https://Piyush2510.pythonanywhere.com/book", {
@@ -21,7 +21,7 @@ document.getElementById("sendButton").onclick = function () {
     .then(response => response.text())
     .then(result => {
         console.log("Server Response:", result);
-        alert("booked Successfully!");
+        alert("booked Successfully! thanks for booking");
     })
     .catch(error => {
         console.error("Error:", error);
