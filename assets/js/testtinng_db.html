@@ -3,36 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attach Function to Button</title>
+    <title>Book a Room</title>
+    
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+        }
+        header h1{
+            font-size: 60px;
+        }
+        header{
+            background: #00f6d1;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+        header a{
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            background-color: #00f6d1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+        header a:hover{
+            background-color: #3db6a4;
+            color: gold;
+            font-weight: bold;
+            scale: 1.5;
+            border: 2px solid gold;
+        }
+        .return:hover{
+            background-color: #00f6d1;
+        }
+        .return{
+            text-align: left;
+            border-radius: 50%;
+            background-color: #00f6d1;
+            min-width: 150px;
+            min-height: 150px;
+            font-size: xx-large;
+            text-decoration: none;
+        }
+        .active_nav_admin{
+            background-color: #3db6a4;
+            color: gold;
+            font-weight: bold;
+        }
+        .admin_room_book{
+            display: flex;
+            justify-items: center;
+            margin: 20px;
+        }
+        .container1{
+            flex:1;
+        }
+        h2{
+            align-self: center;
+            text-align: center;
+        }
+        .container2{
+            align-items: center;
+            border-radius: 10px;
+            background-color: #00f6d1;
+            padding: 10px;
+            margin-right: 100px;
+        }
+        .container2 *{
+            margin: 10px;
+        }
+        .admin_book{
+            background-color: #00f6d1;
+            height: 40px;
+            border-radius: 10px;
+            align-self: center;
+            justify-self: center;
+            width: 180px;
+        }
+        .admin_book:hover{
+            border: 2px solid gold;
+            color: gold;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <button>Send Data</button>
+    <header>
+        <h1>Book a Room</h1>
+        <nav>
+            <a href="/" class="return">🔙</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="https://piyush2510.pythonanywhere.com/manage">Manage Bookings</a>
+            <a href="https://piyush2510.pythonanywhere.com/checkout">checkout</a>
+            <a href="https://piyush2510.pythonanywhere.com/book-room" class="active_nav_admin">Book Room</a>
+            <a href="#manage-users">Manage Users</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
 
-    <!-- <script>
-        document.getElementById("sendButton").onclick = function () {
-    const data = {
-        name:"yash",
-        email:"yash@gmail.com"
-        };
+    <div class="admin_room_book">
+        <div class="container1">
+            <!-- Display available rooms in a table -->
+            <h2>Available Rooms</h2>
+            <table border="1" class="room_detail">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for room in rooms %}
+                        <tr>
+                            <td>{{ room[0] }}</td>  <!-- room[0] is the room number -->
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="container2">
+            <h2>Booking Form</h2>
+            <form action="/book" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
 
-    fetch("https://Piyush2510.pythonanywhere.com/add", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json" // Ensure JSON data
-        },
-        body: JSON.stringify(data) // Convert JS object to JSON
-    })
-    .then(response => response.text())
-    .then(result => {
-        console.log("Server Response:", result);
-        alert("booked Successfully!");
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Failed book right now.Try again in some time");
-    });
-};
-    </script> -->
-    <script src="api_booking.js"></script>
+                <label for="mobile_number">Mobile Number:</label>
+                <input type="text" id="mobile_number" name="mobile_number" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="check_in">Check-In Date:</label>
+                <input type="date" id="check_in" name="check_in" required><br>
+
+                <label for="check_out">Check-Out Date:</label>
+                <input type="date" id="check_out" name="check_out" required><br>
+
+                <label for="number_of_adults">Number of Adults:</label>
+                <input type="number" id="number_of_adults" name="number_of_adults" min="1" required><br>
+
+                <label for="room_number">Room Number:</label>
+                <select id="room_number" name="room_number" required>
+                    {% for room in rooms %}
+                        <option value="{{ room[0] }}">{{ room[0] }}</option>  <!-- Access room number -->
+                    {% endfor %}
+                </select><br>
+
+                <label for="transaction_number">Transaction Number:</label>
+                <input type="text" id="transaction_number" name="transaction_number" required><br>
+
+                <label for="status">Booking Status:</label>
+                <select id="status" name="status" required>
+                    <option value="pending">Pending</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="completed">Completed</option>
+                </select><br>
+                <center>
+                    <button type="submit" class="admin_book">Book Room</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <br>
 </body>
 </html>
