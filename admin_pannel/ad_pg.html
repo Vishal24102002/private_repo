@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
+    <!-- <link rel="stylesheet" href="main.css" -->
 </head>
 <body>
     <header>
         <h1>Room Booking System - Admin Panel</h1>
-        <nav>
-            <a href="#dashboard">Dashboard</a>
-            <a href="https://piyush2510.pythonanywhere.com/manage">Manage Bookings</a>
-            <a href="https://piyush2510.pythonanywhere.com/checkout">checkout</a>
-            <a href="https://piyush2510.pythonanywhere.com/book-room">Book Room</a>
-            <a href="https://piyush2510.pythonanywhere.com/registration">Manage Registration</a>
-            <a href="logout.html">Logout</a>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+            <li><a href="#dashboard" class="active">Dashboard</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/manage">Manage Bookings</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/checkout">checkout</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/book-room">Book Room</a></li>
+            <li class="dropdown"><a href="https://piyush2510.pythonanywhere.com/registration"><span>Manage</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="https://piyush2510.pythonanywhere.com/registration#registration">Registration</a></li>
+              <li><a href="https://piyush2510.pythonanywhere.com/registration#work_with_us">Work with Us</a></li>
+              <li><a href="https://piyush2510.pythonanywhere.com/registration#event_register">Event</a></li>
+            </ul>
+          </li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
         </nav>
     </header>
     <main>
