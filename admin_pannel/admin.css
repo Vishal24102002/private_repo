@@ -334,9 +334,13 @@ button:hover {
 
 header {
     background: #00f6d1;
-    color: white;
     padding: 10px 20px;
     text-align: center;
+}
+
+header h1{
+  font-size: 60px;
+  color: #212529;
 }
 
 nav a {

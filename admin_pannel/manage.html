@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Data Table</title>
+    
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        h1{
+            margin: 20px;
+            justify-self: center;
+            font-size: 40px;
+            color: #00f6d1;
+            font-weight: bold;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px;
+        width: fit-content;
+        justify-self: center;
+        }
+        table, th, td {
+            border: 2px groove black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .button_edit{
+            display: flex;
+            justify-self: center;
+        }
+
+        button{
+            width: fit-content;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manage Details</h1>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/manage">Manage Bookings</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/checkout">checkout</a></li>
+            <li><a href="https://piyush2510.pythonanywhere.com/book-room">Book Room</a></li>
+            <li class="dropdown"><a href="manage.html" class="active"><span>Manage</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="manage.html#volentear">Registration</a></li>
+              <li><a href="https://piyush2510.pythonanywhere.com/registration#work_with_us">Work with Us</a></li>
+              <li><a href="https://piyush2510.pythonanywhere.com/registration#event_register">Event</a></li>
+            </ul>
+          </li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <div id="volentear">
+    <h1>Volunteer Table</h1>
+    <table id="volunter-table">
+        <thead>
+            <tr>
+                <th>Id</th> 
+                <th>First Name</th> 
+                <th>Last Name</th> 
+                <th>Email</th>
+                <th>Date of Birth</th> 
+                <th>Gender</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <div class="button_edit">
+        <button>Enter</button>
+        <button>Edit</button>
+        <button>Delete</button>
+        <button>Drop</button>
+    </div>
+    </div>
+
+    <div id="event_reg_detail">
+        <h1>Event Registeration Table</h1>
+        <table id="events-table">
+            <thead>
+                <tr>
+                    <th>Id</th> 
+                    <th>Name</th> 
+                    <th>Age</th> 
+                    <th>Email</th>
+                    <th>Contact</th> 
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div id="event_reg_detail">
+        <h1>work with us</h1>
+        <table id="work-table">
+            <thead>
+                <tr>
+                    <th>ID</th> 
+                    <th>Name</th> 
+                    <th>Date of birth</th> 
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>CV</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch data from the URL
+        fetch('https://piyush2510.pythonanywhere.com/registration')  // Replace with your URL
+            .then(response => response.json())   // Parse the JSON response
+            .then(data => {
+                // Call function to generate tables with the received data
+                generateTable(data.events, 'events-table','event');
+                generateTable(data.volunteers, 'volunter-table','volunter');
+                generateTable(data.work_with_us, 'work-table','work_with_us');
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+        // Function to generate table from JSON data
+        function generateTable(data, tableId, type) {
+            const table = document.getElementById(tableId);
+            const thead = table.querySelector('thead tr');
+            const tbody = table.querySelector('tbody');
+
+            // Create table headers dynamically
+            const columns={'event':['id','name','age','email','contact'],
+            'volunter':['id','first_name','last_name','email','date_of_birth','gender','phone_number'],
+            'work_with_us':['id','full_name','date_of_birth','email','phone_number','cv']
+            };
+            const headers = columns[type];
+
+            // Create table rows dynamically
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.textContent = row[header];
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>
