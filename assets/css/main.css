@@ -712,6 +712,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  text-align: left;
 }
 
 .footer .footer-links {
@@ -901,7 +902,6 @@ h6 {
 }
 
 .info-text {
-  font-size: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -912,12 +912,13 @@ h6 {
 
 .info-heading {
   font-weight: bold;
-  margin: 0;
+  margin: 5px;
+  font-size: 35px;
 }
 
 .info-description {
   margin: 5px 0;
-  font-size: 0.9em;
+  font-size: 20px;
 }
 
 .info-button {
@@ -1742,6 +1743,7 @@ section,
 
 .main_detail{
   display: flex;
+  margin-bottom: 40px;
 }
 
 .main_detail .info-items{
