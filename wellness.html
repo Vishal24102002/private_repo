@@ -8,6 +8,69 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <style>
+        .cont1,.cont2,.cont3{
+          display: flex; 
+        }
+    
+        .cont1 .part1,.cont2 .part2,.cont3 p{
+          flex:1;
+        }
+        
+        .cont1 img,.cont2 img,.cont3 img{
+          max-width: 400px;
+          height: auto;
+          padding: 15px;
+        }
+    
+        .C1,.C2,.C3{
+          margin: 15px;
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+          border-style: solid;
+          border-width: 5px;
+          border-radius: 10px;
+          border-color: rgb(75, 201, 201);
+        }
+        .C3 *,.C2 *,.C1 *{
+          margin: 5px;
+        }
+        button{
+          background-color: #00f6d1;
+          border-radius: 10px;
+          width: 30%;
+          height: 50px;
+          color: gold;
+          font-weight: bold;
+          border: 2px solid black;
+        }
+        button:hover{
+          background-color: aqua;
+          border-top:5px solid black;
+          border-left:5px solid black;
+        }
+        .content h1{
+          padding-top: 10px;
+          font-family: 'Great Vibes';
+          text-align: center;
+          color: rgb(75, 201, 201);
+        }
+    
+        @media (max-width:768px){
+        button{
+            background-color: rgb(104, 194, 247);
+            border-radius: 10px;
+            font-weight: bold;
+            color: gold;
+            width: 90%;
+            height: 50px;
+        }
+        .cont1 img,.cont2 img,.cont3 img{
+          display: none;
+        }
+        }
+    </style>
+    
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -130,52 +193,79 @@
                     </div> <!--details closed-->
                 </div>
                 <center>
-                    <h2 style="padding-bottom: 20px;"><b>Sessions</b></h2>
+                    <h1 style="font-size: 50px;"><b>Sessions</b></h1>
                 </center>
-                <div class="main_detail">
-                    <div class="wcont1">
-                        <div class="info-items">
-                            <div class="info-icon">🌼</div>
-                            <div class="info-text">
-                                <p class="info-heading">Psychic Reading</p>
-                                <p class="info-description">Reveal the hidden truths of your Earthly and Galactic soul.<br> 
-                                    This intuitive session provides insights into your soul's journey, from Earth’s ancient history to cosmic origins, offering clarity, guidance, and empowerment for your present life path.
-                                    </p>
-                                <a href="booking_wellness.html" class="info-button">Schedule Now</a>
+
+                <section id="starter-section" class="starter-section section">
+
+                    <div class="container" data-aos="fade-up">
+                      <div class="content">
+                        <div class="C1">
+                          <h1><b>Quantum Healing</b></h1>
+                          <div class="cont1">
+                            <div class="part1">
+                              <p>
+                                <b>Rediscover harmony by aligning your mind, body, and soul with the universe's energy.</b>  
+                                <br>In this session, the owner channels healing energies to clear emotional blocks, balance energy fields, and rejuvenate your soul. Experience physical, emotional, and spiritual well-being.  
+                              </p>
+                              <ul>
+                                <li>Duration: 1 hour </li>
+                                <li>Price: ₹1,500 /-</li>
+                              </ul>
+                              <center>
+                                <button onclick="booking_site()">Book</button>
+                              </center>
                             </div>
-                        </div>
-                        <div class="info-items">
-                            <div class="info-icon">🪻</div>
-                            <div class="info-text">
-                                <p class="info-heading">Coaching Overview</p>
-                                <p class="info-description">Unlock your potential to heal, guide, and transform lives with our exclusive coaching programs. Whether you aspire to become a certified Quantum Healer or master intuitive psychic abilities, our programs are designed to empower you with practical skills and profound knowledge.</p>
-                                <a href="booking_wellness.html" class="info-button">Schedule Now</a>
+                            <img src="assets/img/booking_well.jpg">
+                          </div>
+                          
+                        </div><!-- ending of the booking wellness -->
+              
+                        <div class="C2">
+                          <h1><b>Past Life Regression</b></h1>
+                          <div class="cont2">
+                            <div class="part2">
+                              <p>
+                                <b>Travel through time and uncover the wisdom of your past lives.</b> 
+                                <br>This session takes you on a deep meditative journey to access memories from past lives, helping resolve current-life challenges and offering profound self-awareness.  
+                              </p>
+                              <ul>
+                                <li>Duration: 90 minutes</li>
+                                <li>Price: ₹2,500 /-</li>
+                              </ul>
+                              <center>
+                                <button onclick="booking_site()">Book</button>
+                              </center>
                             </div>
-                        </div>                        
+                            <img src="assets/img/wellness_booking/part.jpg">
+                          </div>
+                        </div><!-- ending of the booking wellness -->
+                        
+                        <div class="C3">
+                          <h1><b>Psychic Reading</b></h1>
+                          <div class="cont3">
+                            <div class="part3">
+                              <p>
+                                <b>Reveal the hidden truths of your Earthly and Galactic soul.</b>  
+                                <br>This intuitive session provides insights into your soul's journey, from Earth’s ancient history to cosmic origins, offering clarity, guidance, and empowerment for your present life path.  
+                              </p>
+                              <ul>
+                                <li>Duration: 1 hour</li>
+                                <li>Price: ₹5,000 /-</li>
+                              </ul>
+                              <center>
+                                <button onclick="booking_site()">Book</button>
+                              </center>
+                            </div>
+                            <img src="assets/img/wellness_booking/Psychic-reading.jpg">
+                          </div>
+                        </div><!-- ending of the booking wellness -->
+              
+                      </div>
                     </div>
-                    <div class="wcont2">
-                        <div class="info-items">
-                            <div class="info-icon">🌸</div>
-                            <div class="info-text">
-                                <p class="info-heading">Quantum Healing</p>
-                                <p class="info-description">Rediscover harmony by aligning your mind, body, and soul with the universe's energy.<br> 
-                                    In this session, healing energies are channeled to clear emotional trauma blocks, balance energy fields, and rejuvenate your soul. Experience physical, emotional, and spiritual well-being.  
-                                    </p>
-                                <a href="booking_wellness.html" class="info-button">Schedule Now</a>
-                            </div>
-                        </div>
-                        <div class="info-items">
-                            <div class="info-icon">🌿</div>
-                            <div class="info-text">
-                                <p class="info-heading">Past Life Regression</p>
-                                <p class="info-description">Travel through time and uncover the wisdom of your past lives.<br>
-                                    This session takes you on a deep meditative journey to access memories from past lives, helping resolve current-life challenges and offering profound self-awareness by connecting with your inner being.
-                                    </p>
-                                <a href="booking_wellness.html " class="info-button">Schedule Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
+                  </section><!-- /Starter Section Section -->
+              
 
                 <div class="collegues">
                     <div class="card_guide">
@@ -196,39 +286,6 @@
                     </div>
                 </div>
             </div>
-                    <!-- Features Section -->
-                    <!-- <section id="features" class="features section">
-                        <div class="container">
-                            <div class="row gy-4 align-items-center features-item">
-                                <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </section> -->
-
-                <!-- </div> -->
-                <!-- <div class="help-box d-flex flex-column justify-content-center align-items-center">
-                            <i class="bi bi-headset help-icon"></i>
-                            <h4>Have a Question?</h4>
-                            <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i>
-                                <span>+91 9309436559</span></p>
-                            <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a
-                                    href="mailto:hemecovillage@gmail.com">hemecovillage@gmail.com</a></p>
-                        </div> -->
-            
-
-            <!-- <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-                        <img src="assets/img/wellness/therapy.jpg" class="img-fluid" alt="" style="min-height: fit-content; object-fit: fill;">
-                    </div>
-                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">                
-                        
-                    </div>
-                </div> -->
-            <!-- </div> -->
         </section><!-- /Service Details Section -->
 
 
@@ -330,6 +387,11 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        function booking_site(){
+            window.location.href='online-session.html'
+        }
+    </script>
 
 </body>
 
