@@ -27,16 +27,43 @@
         const password = document.getElementById("password").value;
 
         // Basic authentication (Replace with server-side validation in real-world apps)
-        if (username === "Admin123" && password === "password123") {
-            // Set login state in localStorage
-            localStorage.setItem("isLoggedIn", "true");
-            localStorage.setItem("username", username);
 
-            alert("Login successful!");
-            window.location.href="ad_pg.html";
-        } else {
-            alert("Invalid credentials!");
-        }
+        // Data to send
+        const Data = {
+           user: username,
+            pass: password
+        };
+
+        // Sending JSON data using POST
+        fetch('https://vishalpypi.pythonanywhere.com/login', {
+            method: "POST", // HTTP method
+            headers: {
+                "Content-Type": "application/json" // Inform server that the body contains JSON
+            },
+            body: JSON.stringify(Data) // Convert JavaScript object to JSON string
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); // Parse the JSON response
+                } else {
+                    throw new Error("Network response was not ok");
+                }
+            })
+            .then(data => {
+                // Display the response in an alert
+                alert("Success: " + JSON.stringify(data));
+                if (JSON.stringify(data)=='"login sucessfully"'){
+                    // Navigate to a new page
+                    window.location.href = 'ad_pg.html';
+                }
+                else{
+                    console.log("error in teh avascript")
+                }
+            })
+            .catch(error => {
+                // Display any errors in an alert
+                alert("Error: " + error.message);
+            });
     });
     </script>
 </body>

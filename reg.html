@@ -310,7 +310,7 @@
     <div class="reg_main_body">
       <div class="card">
         <h4>Volunteers</h4>
-        <form onsubmit="event.preventDefault(); submitForm();">
+        <form onsubmit="event.preventDefault(); submitForm(); submit_voluteer();">
           <label for="fname" class="lab">First Name:</label>
           <input type="text" id="fname" name="fname" required>
 
@@ -337,6 +337,7 @@
           <input type="submit" value="Register">
         </form>
       </div>
+
       <div class="card">
         <h4>Work with us</h4>
         <!-- <form> -->
@@ -355,7 +356,7 @@
         <label for="cv-upload" class="lab">Choose your CV:</label>
         <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx">
 
-<!-- 
+        <!-- 
         <lable class="lab">Your Introduction</lable>
         <textarea style="max-height:60px ;"  name="message" rows="4" cols="30">
 
@@ -463,6 +464,58 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function submit_voluteer() {
+      showLoading();
+
+      // Collect form data
+      const Fname = document.getElementById("fname").value;
+      const Lname = document.getElementById("lname").value;
+      const email = document.getElementById("email").value;
+      const birth = document.getElementById("dob").value;
+      const Gender1 = getGenderValue();
+      const Phone = document.getElementById("phone").value;
+
+      console.log(Gender1)
+
+      // Prepare the data object
+      const data = {
+        First_Name: Fname,
+        Last_Name: Lname,
+        Email: email,
+        DOB: birth,
+        Gender: Gender1,
+        Phone_No: Phone
+      };
+      
+      fetch('https://vishalpypi.pythonanywhere.com//volunter_entry',{
+          method: "POST", // HTTP method
+          headers: {
+              "Content-Type": "application/json" // Inform server that the body contains JSON
+          },
+          body: JSON.stringify(data) // Convert JavaScript object to JSON string
+      })
+      .then(response => {
+          if (response.ok) {
+              return response.json(); // Parse the JSON response
+          } else {
+              throw new Error("Network response was not ok");
+          }
+      })
+      .then(data => {
+          // Display the response in an alert
+          alert("Success: " + JSON.stringify(data));
+          showSuccessPopup();
+          hideLoading();
+      })
+      .catch(error => {
+          // Display any errors in an alert
+          alert("Error: " + error.message);
+          hideLoading();
+      });
+    }
+
+  </script>
 
 </body>
 
