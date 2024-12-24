@@ -2541,6 +2541,12 @@ section,
   width: 100%;
 }
 
+.portfolio-details-slider{
+  height: auto;
+  width: 650px;
+  filter: drop-shadow(0 10px 35px var(--accent-color));
+}
+
 .portfolio-details .swiper-wrapper {
   height: auto;
 }
